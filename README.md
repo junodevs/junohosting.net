@@ -1,4 +1,4 @@
-# hosting-panel
+# hosting-website
 
 ## Project setup
 ```
