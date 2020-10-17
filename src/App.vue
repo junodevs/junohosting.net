@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/tos">Terms Of Service</router-link> |
       <a href="https://discord.gg/asfmaXr">Discord</a>
-    </div>
-    <router-view/>
+    </nav>
+    <router-view />
   </div>
 </template>
 
@@ -20,7 +20,7 @@
   margin: 0 auto;
 }
 
-#nav {
+nav {
   text-align: center;
   padding: 30px;
 

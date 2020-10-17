@@ -1,24 +1,29 @@
-# hosting-website
+# Juno Hosting
 
-## Project setup
-```
-yarn install
+This repository serves the source code of the official website for Juno Hosting.
+
+Juno Hosting is a modern boutique shared server hosting.
+
+## Local build setup
+
+```sh
+# Install dependencies
+$ yarn install
+
+# Serves with HMR on :8080 for development
+$ yarn serve
+
+# Compiles and minifies for production
+$ yarn build
+
+# Lints and fixes files
+$ yarn lint
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Contributors
 
-### Compiles and minifies for production
-```
-yarn build
-```
+* [Luke Whrit <lukewhrit@pm.me>](https://github.com/lukewhrit) - Lead developer and maintainer.
 
-### Lints and fixes files
-```
-yarn lint
-```
+## License
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The NPFM website is available under the MIT License. A copy of the MIT license can be found in the [`license`](LICENSE) file
