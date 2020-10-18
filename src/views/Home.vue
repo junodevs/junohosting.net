@@ -1,7 +1,7 @@
 <template>
   <section id="home">
     <div class="flex mt-3 mb-5">
-      <div id="title-blurb" class="w-1/2 mr-3">
+      <div id="title-blurb" class="w-2/2 sm:w-1/2">
           <h1 id="title" class="text-center font-bold text-2xl">
             Juno Hosting
           </h1>
@@ -13,9 +13,15 @@
             with your server, that means great reliability, quick support, and good prices.
           </p>
         </div>
-      <div id="pattern" class="w-1/2"></div>
+      <div id="pattern" class="sm:ml-2 sm:w-1/2"></div>
     </div>
-    <h2 class="text-center font-bold text-2xl mb-5">Plans</h2>
+    <h2 class="text-center font-bold text-2xl mb-1">Plans</h2>
+    <p class="mb-5 mx-auto text-center max-w-lg">
+      We offer 4 distinct tiers of VPS'. Each plan a 500GB
+      monthly transfer limit, 300mb/s of bandwith, and a choice
+      between the Ubuntu 18.04/20.04, CentOS 7/8, or Debian 9/10
+      operating system's.
+    </p>
     <Plans />
   </section>
 </template>
@@ -27,7 +33,8 @@ import Plans from '@/components/Plans.vue'
 @Component({
   components: { Plans }
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+}
 </script>
 
 <style lang="pcss" scoped>

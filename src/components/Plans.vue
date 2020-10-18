@@ -1,7 +1,7 @@
 <template>
   <section id="plans">
-    <div class="flex mb-4">
-      <div class="w-1/4 mr-3" v-for="plan in plans" :key="plan.tier">
+    <div class="grid grid-rows-2 grid-cols-2 sm:grid-cols-4 sm:grid-rows-1 gap-2 mb-4">
+      <div v-for="plan in plans" :key="plan.tier">
         <Card :title="'Tier ' + plan.tier">
           <div class="px-6 ml-2">
             <ul class="text-gray-700">

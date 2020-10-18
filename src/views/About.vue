@@ -14,7 +14,7 @@
       <div id="colors" class="flex">
         <div id="color-container" class="w-1/6 mr-4" v-for="color in colors" :key="color">
           <div class="color h-64 rounded" :id="'color-' + color"></div>
-          <p class="text-center mt-2">#{{ color }}</p>
+          <p class="text-center mt-2 mb-3">#{{ color }}</p>
         </div>
       </div>
     </div>
@@ -50,4 +50,8 @@ export default class About extends Vue {
 #color-f8f8f8 { background-color: #f8f8f8; }
 #color-5d737e { background-color: #5d737e; }
 #color-161925 { background-color: #161925; }
+
+#colors {
+  overflow: auto;
+}
 </style>

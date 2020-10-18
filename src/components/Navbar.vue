@@ -1,7 +1,7 @@
 <template>
-  <nav id="nav-container" class="grid grid-cols-5 gap-2 mb-5">
+  <nav id="nav-container" class="grid grid-cols-5 gap-2 mb-1">
     <div class="col-span-1">
-      <span class="font-bold text-lg">
+      <span class="hidden sm:inline-block font-bold text-lg">
         Juno Hosting
       </span>
     </div>
