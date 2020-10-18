@@ -28,4 +28,8 @@ span {
     text-gray-700
     mb-2;
 }
+
+span:hover {
+  @apply bg-gray-300;
+}
 </style>
