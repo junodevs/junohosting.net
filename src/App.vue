@@ -1,14 +1,23 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/tos">Terms Of Service</router-link> |
-      <a href="https://discord.gg/asfmaXr">Discord</a>
-    </nav>
+  <div id="app" class="container mx-auto px-6 py-4">
+    <Navbar />
+    <hr>
     <router-view />
+    <hr class="mt-5">
+    <Footer />
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
+
+@Component({
+  components: { Navbar, Footer }
+})
+export default class App extends Vue {}
+</script>
 
 <style lang="less">
 #app {

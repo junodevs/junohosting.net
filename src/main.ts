@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import './registerServiceWorker'
+import '@/assets/tailwind.pcss'
+import '@/assets/global.pcss'
 import router from './router'
 import store from './store'
 

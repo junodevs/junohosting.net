@@ -17,8 +17,12 @@ import { Component, Vue } from 'vue-property-decorator'
 export default class Terms extends Vue {}
 </script>
 
-<style lang="less" scoped>
+<style lang="pcss" scoped>
 h1 {
-  text-align: center;
+  @apply text-center font-bold m-3 text-2xl;
+}
+
+p {
+  @apply mt-3;
 }
 </style>
