@@ -41,9 +41,7 @@ img {
 #title {
   text-transform: uppercase;
   font-family: "Permanent Marker";
-  background: -webkit-linear-gradient(#ff4bc9, #56e0ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #a19ee7;
 }
 
 #pattern {
