@@ -1,6 +1,6 @@
 <template>
-  <section id="about">
-    <h1>Juno Hosting Terms Of Service</h1>
+  <section id="privacy-policy">
+    <h1>Juno Hosting Privacy Policy</h1>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultricies ullamcorper ex, sed finibus lorem cursus vitae. Cras pellentesque nisl lectus, non congue libero facilisis eu. Phasellus quis lectus augue. Maecenas vel dolor et dui dignissim porta vel eget sem. Quisque non sollicitudin lacus. Nulla vestibulum metus magna, ac auctor augue pellentesque et. In hac habitasse platea dictumst. Aenean a finibus mi. Proin purus mi, pharetra ac volutpat id, egestas eu ligula. Sed at mi eu ipsum elementum fermentum ac sit amet ipsum. Sed gravida ipsum quis turpis aliquam mollis.</p>
     <p>Integer at purus vel mauris congue dictum id ut purus. Vestibulum mattis purus at leo pharetra volutpat. Donec semper nulla in libero eleifend, non luctus sem hendrerit. Donec consequat gravida nulla sed finibus. Pellentesque a velit ac odio pulvinar blandit ac quis turpis. Etiam ut metus eget ipsum finibus placerat eu et mauris. Fusce at nisi id erat consequat malesuada.</p>
@@ -13,8 +13,8 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
-@Component({})
-export default class Terms extends Vue {}
+@Component
+export default class Privacy extends Vue {}
 </script>
 
 <style lang="pcss" scoped>

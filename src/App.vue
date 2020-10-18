@@ -2,8 +2,8 @@
   <div id="app" class="container mx-auto px-6 py-4">
     <Navbar />
     <hr>
-    <router-view />
-    <hr class="mt-5">
+    <router-view class="mt-5 mb-5" />
+    <hr>
     <Footer />
   </div>
 </template>

@@ -17,8 +17,27 @@ const routes: RouteConfig[] = [
   },
   {
     path: '/tos',
-    name: 'TOS',
-    component: () => import(/* webpackChunkName: "tos" */ './views/TOS.vue')
+    name: 'Terms Of Service',
+    component: () => import(/* webpackChunkName: "tos" */ './views/Terms.vue')
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy Policy',
+    component: () => import(/* webpackChunkName: "privacy" */ './views/Privacy.vue')
+  },
+  {
+    path: '/status',
+    name: 'Status',
+    component: () => import(/* webpackChunkName: "status" */ './views/Status.vue')
+  },
+  {
+    path: '/panel',
+    name: 'Web Panel',
+    component: () => import(/* webpackChunkName: "" */ './views/WebPanel.vue')
+  },
+  {
+    path: '*',
+    redirect: { name: 'Home' }
   }
 ]
 
