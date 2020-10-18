@@ -44,7 +44,6 @@ ul li a {
 }
 
 a:hover {
-  border: none;
   @apply border-gray-200 bg-gray-200;
 }
 </style>

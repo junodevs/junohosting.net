@@ -10,6 +10,6 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class Card extends Vue {
-  @Prop() private title!: string;
+  @Prop({ required: true }) private title!: string;
 }
 </script>

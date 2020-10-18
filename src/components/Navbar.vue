@@ -1,5 +1,5 @@
 <template>
-  <div id="nav-container" class="grid grid-cols-5 gap-2 mb-5">
+  <nav id="nav-container" class="grid grid-cols-5 gap-2 mb-5">
     <div class="col-span-1">
       <span class="font-bold text-lg">
         Juno Hosting
@@ -29,7 +29,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script lang="ts">
@@ -49,7 +49,6 @@ ul li a {
 }
 
 a:hover {
-  border: none;
   @apply border-gray-200 bg-gray-200;
 }
 </style>

@@ -1,9 +1,7 @@
 <template>
-  <span>
-    <router-link :to="to">
-      Purchase
-    </router-link>
-  </span>
+  <router-link :to="to">
+    <span>Purchase</span>
+  </router-link>
 </template>
 
 <script lang="ts">
@@ -11,7 +9,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class PurchaseButton extends Vue {
-  @Prop() private to!: string;
+  @Prop({ required: true }) private to!: string;
 }
 </script>
 

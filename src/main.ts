@@ -8,6 +8,14 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+if (process.env.NODE_ENV === 'development') {
+  import('vue-axe')
+    .then(({ default: VueAxe }) => {
+      Vue.use(VueAxe)
+    })
+    .catch(err => { throw new Error(err) })
+}
+
 new Vue({
   router,
   store,

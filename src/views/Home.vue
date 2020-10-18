@@ -2,7 +2,9 @@
   <section id="home">
     <div class="flex mt-3 mb-5">
       <div id="title-blurb" class="w-1/2 mr-3">
-          <span id="title" class="text-center font-bold m-3 text-2xl">Juno Hosting</span>
+          <h1 id="title" class="text-center font-bold text-2xl">
+            Juno Hosting
+          </h1>
           <p class="mb-5 text-left max-w-xl">
             Juno Hosting is a modern boutique shared server hosting company
             founded and ran by <a class="link" href="https://junodevs.tech">Juno</a>.
@@ -40,7 +42,7 @@ img {
 
 #title {
   text-transform: uppercase;
-  font-family: "Permanent Marker";
+  font-family: "Permanent Marker", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #a19ee7;
 }
 
