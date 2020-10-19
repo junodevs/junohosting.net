@@ -1,5 +1,5 @@
 <template>
-  <section id="plans">
+  <section>
     <div class="grid grid-rows-2 grid-cols-2 sm:grid-cols-4 sm:grid-rows-1 gap-2 mb-4">
       <div v-for="plan in plans" :key="plan.tier">
         <Card :title="'Tier ' + plan.tier">

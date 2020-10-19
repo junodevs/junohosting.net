@@ -10,7 +10,7 @@
             founded and ran by <a target="_blank" class="link" rel="noopener noreferrer" href="https://junodevs.tech">Juno</a>.
 
             We're a small team of 4 dedicated to delivering the best possible experiences
-            with your server, that means great reliability, quick support, and good prices.
+            to you, that means great reliability, quick support, and good prices.
           </p>
         </div>
       <div class="pattern sm:ml-2 sm:w-1/2"></div>
@@ -46,10 +46,11 @@ import { Component, Vue } from 'vue-property-decorator'
 import Plans from '@/components/Plans.vue'
 
 @Component({
-  components: { Plans }
+  components: {
+    Plans
+  }
 })
-export default class Home extends Vue {
-}
+export default class Home extends Vue {}
 </script>
 
 <style lang="pcss" scoped>
