@@ -2,7 +2,7 @@
   <section>
     <div class="grid grid-rows-2 grid-cols-2 sm:grid-cols-4 sm:grid-rows-1 gap-2 mb-4">
       <div v-for="plan in plans" :key="plan.tier">
-        <Card :title="'Tier ' + plan.tier">
+        <Card :title="'Tier ' + plan.tier" class="shadow-lg">
           <div class="px-6 ml-2">
             <ul class="text-gray-700">
               <li v-if="plan.cores == 1">{{ plan.cores }} vCPU</li>
@@ -12,7 +12,7 @@
               <li>Costs ${{ plan.price }} per month</li>
             </ul>
           </div>
-          <div class="px-6 pt-4 pb-2">
+          <div class="px-6 pt-4">
             <PurchaseButton :to="'/buy?p=' + plan.tier" />
           </div>
         </Card>
