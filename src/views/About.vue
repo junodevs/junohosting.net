@@ -1,13 +1,23 @@
 <template>
-  <section id="about">
+  <section id="about" class="sm:max-w-3xl mx-auto">
     <h1 class="text-center font-bold m-3 text-3xl">About Juno Hosting</h1>
-    <p>
-      Juno Hosting is a modern boutique shared server hosting company
-      founded and ran by <a class="link" href="https://junodevs.tech">Juno</a>.
-
-      We're a small team of 4 dedicated to delivering the best possible experiences
-      with your server, that means great reliability, quick support, and good prices.
-    </p>
+    <article>
+      <p>
+        Juno Hosting is a modern boutique server hosting company founded
+        and ran by <a class="link" href="https://junodevs.tech">Juno</a>. We're a small
+        team of 4 dedicated to delivering a superior experience for an
+        affordable price.
+      </p>
+      <p class="mt-3">
+        Choosing Juno, you can expect incredible reliability and quick support.
+        We never oversell our servers, and ethically source our hardware and power.
+        We maintain sustainably low pricing by eliminating the large
+        overhead costs of typical small scale hosting companies.
+        We currently have one location in the San Francisco Bay Area with a
+        PowerEdge R420. Interested in trying our services? Looking for a custom
+        solution? Feel free to contact us.
+      </p>
+    </article>
     <h2 class="font-bold text-2xl my-3">Branding</h2>
     <div>
       <h3 class="font-bold text-xl my-3">Colors</h3>
