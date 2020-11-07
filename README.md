@@ -8,16 +8,13 @@ Juno Hosting is a modern boutique shared server hosting.
 
 ```sh
 # Install dependencies
-$ yarn install
+$ yarn
 
-# Serves with HMR on :8080 for development
-$ yarn serve
+# Serves with HMR on :3000 for development
+$ yarn dev
 
 # Compiles and minifies for production
 $ yarn build
-
-# Lints and fixes files
-$ yarn lint
 ```
 
 ## Contributors
