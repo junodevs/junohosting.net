@@ -21,12 +21,12 @@
               {{ plan.cores }} vCPUs
             </li>
             <li v-if="plan.mb">
-              {{ plan.ram }}MB of RAM
+              {{ plan.ram }} MB of RAM
             </li>
             <li v-else>
-              {{ plan.ram }}GB of RAM
+              {{ plan.ram }} GB of RAM
             </li>
-            <li>{{ plan.storage }}GB of Storage</li>
+            <li>{{ plan.storage }} GB of Storage</li>
             <li>Costs ${{ plan.price }}/mo</li>
           </ul>
         </div>
@@ -55,9 +55,9 @@ export default defineComponent({
   data: () => ({
     plans: [
       { tier: 1, cores: 1, ram: 512, storage: 15, price: '2.50', mb: true },
-      { tier: 2, cores: 1, ram: 2, storage: 45, price: '10.00' },
-      { tier: 3, cores: 2, ram: 4, storage: 80, price: '12.00' },
-      { tier: 4, cores: 4, ram: 16, storage: 120, price: '15.00' }
+      { tier: 2, cores: 1, ram: 2, storage: 45, price: '5.00' },
+      { tier: 3, cores: 2, ram: 4, storage: 80, price: '10.00' },
+      { tier: 4, cores: 4, ram: 8, storage: 120, price: '15.00' }
     ]
   })
 })

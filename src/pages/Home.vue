@@ -16,8 +16,8 @@
           </p>
           <div class="py-5">
             <a
-              href="#plans"
-              class="text-white rounded-full py-2 px-5 text-lg font-semibold bg-indigo-500 inline-block border border-indigo-500 mr-3"
+              id="plans-button"
+              href="/#plans"
             >See the Plans</a>
             <router-link
               id="discord-button"
@@ -34,11 +34,11 @@
         <h1>Best in-class pricing</h1>
         <p>
           Juno Hosting circumvents many of the pitfalls our competitors face,
-          therefore we're able to provide the best pricing in our class.
+          therefore we're able to provide the best VPS pricing in our class.
         </p>
       </div>
       <div>
-        <h1>Quick Support</h1>
+        <h1>Swift Support</h1>
         <p>
           Thanks to our small size Juno Hosting is able to deliever some of the
           fastest support in the industry even with a small team.
@@ -47,6 +47,17 @@
     </section>
     <section id="plans">
       <h1>Plans</h1>
+      <p>
+        Juno Hosting offers four distinct tiers of VPS' plans each designed to
+        suit your best interests. If you're in
+        need of a custom solution please feel free to
+        <router-link
+          class="link"
+          to="/discord"
+        >
+          contact us.
+        </router-link>
+      </p>
       <Plans />
     </section>
   </main>
@@ -96,5 +107,19 @@ export default defineComponent({
 
 #discord-button:hover {
   @apply bg-white text-black;
+}
+
+#plans-button {
+  @apply
+    text-white
+    rounded-full
+    py-2 px-5
+    text-lg
+    font-semibold
+    bg-indigo-500
+    inline-block
+    border
+    border-indigo-500
+    mr-3;
 }
 </style>
