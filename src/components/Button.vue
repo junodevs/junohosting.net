@@ -10,8 +10,14 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'Button',
   props: {
-    name: String,
-    to: String
+    name: {
+      type: String,
+      required: true
+    },
+    to: {
+      type: String,
+      required: true
+    }
   }
 })
 </script>

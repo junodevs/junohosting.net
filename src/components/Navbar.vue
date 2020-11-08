@@ -1,7 +1,10 @@
 <template>
   <nav class="grid grid-cols-5 gap-2 mb-1">
     <div class="col-span-1">
-      <span id="title" class="hidden sm:inline-block">
+      <span
+        id="title"
+        class="hidden sm:inline-block"
+      >
         Juno Hosting
       </span>
     </div>
@@ -23,7 +26,11 @@
           </router-link>
         </li>
         <li>
-          <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/asfmaXr">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://discord.gg/asfmaXr"
+          >
             Discord
           </a>
         </li>
@@ -31,6 +38,17 @@
     </div>
   </nav>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'Navbar',
+  data: () => ({
+    open: false
+  })
+})
+</script>
 
 <style lang="postcss" scoped>
 nav {
@@ -60,14 +78,3 @@ ul li *:hover, ul li a:focus {
     text-lg;
 }
 </style>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'Navbar',
-  data: () => ({
-    open: false
-  })
-})
-</script>

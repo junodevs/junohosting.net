@@ -4,7 +4,10 @@
 
     <p>
       Juno hosting is a modern boutique shared server hosting founded and ran by
-      <a class="link" href="https://junodevs.tech"> Juno Devs</a>. We're a small
+      <a
+        class="link"
+        href="https://junodevs.tech"
+      > Juno Devs</a>. We're a small
       team of 4 dedicated to delivering a superior experience with an affordable
       price tag.
     </p>
