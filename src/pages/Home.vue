@@ -59,6 +59,13 @@
         </router-link>
       </p>
       <Plans />
+      <div class="flex justify-center">
+        <small class="max-w-md inline-block text-center">
+          All systems come with a choice between CentOS 7/8, Ubuntu 18.04/Ubuntu
+          20.04 or Debian 9/10 operating systems and a soft data transfer limit of 500
+          gigabytes.
+        </small>
+      </div>
     </section>
   </main>
 </template>

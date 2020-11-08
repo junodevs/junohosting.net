@@ -26,13 +26,13 @@
             <li v-else>
               {{ plan.ram }} GB of RAM
             </li>
+            <li>{{ plan.bw }} mb/s BW</li>
             <li>{{ plan.storage }} GB of Storage</li>
-            <li>Costs ${{ plan.price }}/mo</li>
           </ul>
         </div>
         <div class="px-6 pt-4 justify-center flex">
           <Button
-            :name="`Purchase`"
+            :name="`Buy for $${plan.price}/mo`"
             :to="'/buy?p=' + plan.tier"
           />
         </div>
@@ -54,10 +54,10 @@ export default defineComponent({
   },
   data: () => ({
     plans: [
-      { tier: 1, cores: 1, ram: 512, storage: 15, price: '2.50', mb: true },
-      { tier: 2, cores: 1, ram: 2, storage: 45, price: '5.00' },
-      { tier: 3, cores: 2, ram: 4, storage: 80, price: '10.00' },
-      { tier: 4, cores: 4, ram: 8, storage: 120, price: '15.00' }
+      { tier: 1, cores: 1, bw: 50, ram: 512, storage: 15, price: '2.50', mb: true },
+      { tier: 2, cores: 1, bw: 150, ram: 2, storage: 45, price: 10 },
+      { tier: 3, cores: 2, bw: 150, ram: 4, storage: 80, price: 12 },
+      { tier: 4, cores: 4, bw: 150, ram: 16, storage: 120, price: 15 }
     ]
   })
 })
