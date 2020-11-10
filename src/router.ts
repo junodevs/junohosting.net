@@ -7,7 +7,6 @@ export const router = createRouter({
   routes: [
     { path: '/', component: Home },
     { path: '/about', component: About },
-    { path: '/buy', redirect: '' },
-    { path: '/panel', redirect: '' }
+    { path: '/buy', redirect: '' }
   ]
 })

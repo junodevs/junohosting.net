@@ -21,9 +21,13 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/panel">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://vps.junohosting.net"
+          >
             Web Panel
-          </router-link>
+          </a>
         </li>
         <li>
           <a
@@ -72,6 +76,7 @@ ul li *:hover, ul li a:focus {
 }
 
 #title {
+  font-family: 'Permanent Marker';
   @apply
     ml-3
     font-bold
