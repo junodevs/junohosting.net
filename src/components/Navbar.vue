@@ -24,7 +24,7 @@
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://vps.junohosting.net"
+            href="https://gamma.junohosting.net"
           >
             Web Panel
           </a>

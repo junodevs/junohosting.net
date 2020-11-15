@@ -59,7 +59,7 @@
               class="link"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://vps.junohosting.net"
+              href="https://gamma.junohosting.net"
             >
               Web Panel
             </a>
@@ -106,6 +106,7 @@ footer {
   @apply
     rounded
     bg-gray-200
-    py-2 px-4;
+    py-2 px-4
+    mt-1;
 }
 </style>

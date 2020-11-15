@@ -16,6 +16,7 @@
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
     "@vue/compiler-sfc": "^3.0.2",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.13.0",
     "eslint-config-standard": "^16.0.1",
     "eslint-plugin-import": "^2.22.1",
@@ -25,5 +26,10 @@
     "eslint-plugin-vue": "^7.1.0",
     "typescript": "^4.0.5",
     "vite": "^1.0.0-rc.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

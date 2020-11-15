@@ -7,6 +7,7 @@ export const router = createRouter({
   routes: [
     { path: '/', component: Home },
     { path: '/about', component: About },
-    { path: '/buy', redirect: '' }
+    { path: '/legal/terms', redirect: '' },
+    { path: '/legal/privacy', redirect: '' }
   ]
 })

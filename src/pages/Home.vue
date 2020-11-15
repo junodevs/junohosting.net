@@ -19,12 +19,14 @@
               id="plans-button"
               href="/#plans"
             >See the Plans</a>
-            <router-link
+            <a
               id="discord-button"
-              to="/discord"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://discord.gg/asfmaXr"
             >
               Join Our Discord
-            </router-link>
+            </a>
           </div>
         </div>
       </div>
@@ -49,23 +51,18 @@
       <h1>Plans</h1>
       <p>
         Juno Hosting offers four distinct tiers of VPS' plans each designed to
-        suit your best interests. If you're in
-        need of a custom solution please feel free to
-        <router-link
+        suit your best interests. All systems have a soft data transfer limit of
+        500GB. If you're in need of a custom solution please feel free to
+        <a
           class="link"
-          to="/discord"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://discord.gg/asfmaXr"
         >
           contact us.
-        </router-link>
+        </a>
       </p>
       <Plans />
-      <div class="flex justify-center">
-        <small class="max-w-md inline-block text-center">
-          All systems come with a choice between CentOS 7/8, Ubuntu 18.04/Ubuntu
-          20.04 or Debian 9/10 operating systems and a soft data transfer limit of 500
-          gigabytes.
-        </small>
-      </div>
     </section>
   </main>
 </template>
@@ -83,6 +80,18 @@ export default defineComponent({
 </script>
 
 <style lang="postcss" scoped>
+#plans {
+  @apply mt-3;
+}
+
+#plans h1 {
+  @apply mb-0;
+}
+
+#plans p {
+  @apply mb-3;
+}
+
 #features {
   @apply grid grid-cols-2 mt-3;
 }
