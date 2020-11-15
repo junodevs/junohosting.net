@@ -1,17 +1,24 @@
 <template>
   <div class="card max-w-sm rounded border overflow-hidden p-2">
-    <p class="font-bold text-center text-lg">{{ title }}</p>
+    <p class="font-bold text-center text-lg mb-1">
+      {{ title }}
+    </p>
     <slot />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { defineComponent } from 'vue'
 
-@Component
-export default class Card extends Vue {
-  @Prop({ required: true }) private title!: string;
-}
+export default defineComponent({
+  name: 'Card',
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  }
+})
 </script>
 
 <style lang="postcss" scoped>

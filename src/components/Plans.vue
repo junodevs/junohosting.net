@@ -1,47 +1,66 @@
 <template>
-  <section>
-    <div class="grid grid-rows-2 grid-cols-2 sm:grid-cols-4 sm:grid-rows-1 gap-2 mb-4">
-      <div v-for="plan in plans" :key="plan.tier">
-        <Card :title="'Tier ' + plan.tier" class="shadow-lg">
-          <div class="px-6 ml-2">
-            <ul class="text-gray-700">
-              <li v-if="plan.cores == 1">{{ plan.cores }} vCPU</li>
-              <li v-else>{{ plan.cores }} vCPUs</li>
-              <li>{{ plan.ram }}GB of RAM</li>
-              <li>{{ plan.storage }}GB of Storage</li>
-              <li>Costs ${{ plan.price }} per month</li>
-            </ul>
-          </div>
-          <div class="px-6 pt-4">
-            <PurchaseButton :to="'/buy?p=' + plan.tier" />
-          </div>
-        </Card>
-      </div>
+  <section
+    id="plans"
+    class="grid grid-rows-2 grid-cols-2 gap-2 my-2 md:grid-cols-4 md:grid-rows-1"
+  >
+    <div
+      v-for="plan in plans"
+      :key="plan.tier"
+    >
+      <Card
+        :title="'Tier ' + plan.tier"
+        class="shadow-lg"
+        :badge="plan.price"
+      >
+        <div class="px-6 ml-2">
+          <ul class="text-gray-700">
+            <li v-if="plan.cores == 1">
+              {{ plan.cores }} vCPU
+            </li>
+            <li v-else>
+              {{ plan.cores }} vCPUs
+            </li>
+            <li v-if="plan.mb">
+              {{ plan.ram }} MB of RAM
+            </li>
+            <li v-else>
+              {{ plan.ram }} GB of RAM
+            </li>
+            <li>{{ plan.bw }} mb/s BW</li>
+            <li>{{ plan.storage }} GB of Storage</li>
+          </ul>
+        </div>
+        <div class="px-6 pt-4 justify-center flex">
+          <Button
+            :name="`Buy for $${plan.price}/mo`"
+            :to="'/buy?p=' + plan.tier"
+          />
+        </div>
+      </Card>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import Card from '@/components/Card.vue'
-import PurchaseButton from '@/components/PurchaseButton.vue'
+import { defineComponent } from 'vue'
+import Card from './Card.vue'
+import Button from './Button.vue'
 
-@Component({
+export default defineComponent({
+  name: 'Plans',
   components: {
     Card,
-    PurchaseButton
-  }
-})
-export default class Plans extends Vue {
-  get plans () {
-    return [
-      { tier: 1, cores: 1, ram: 2, storage: 30, price: 5 },
-      { tier: 2, cores: 2, ram: 4, storage: 50, price: 10 },
-      { tier: 3, cores: 4, ram: 8, storage: 75, price: 12 },
-      { tier: 4, cores: 4, ram: 16, storage: 100, price: 15 }
+    Button
+  },
+  data: () => ({
+    plans: [
+      { tier: 1, cores: 1, bw: 50, ram: 512, storage: 15, price: '2.50', mb: true },
+      { tier: 2, cores: 1, bw: 150, ram: 2, storage: 45, price: 10 },
+      { tier: 3, cores: 2, bw: 150, ram: 4, storage: 80, price: 12 },
+      { tier: 4, cores: 4, bw: 150, ram: 16, storage: 120, price: 15 }
     ]
-  }
-}
+  })
+})
 </script>
 
 <style lang="postcss" scoped>

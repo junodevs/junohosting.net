@@ -1,7 +1,10 @@
 <template>
-  <nav id="nav-container" class="grid grid-cols-5 gap-2 mb-1">
+  <nav class="grid grid-cols-5 gap-2 mb-1">
     <div class="col-span-1">
-      <span class="hidden sm:inline-block font-bold text-lg">
+      <span
+        id="title"
+        class="hidden sm:inline-block"
+      >
         Juno Hosting
       </span>
     </div>
@@ -18,13 +21,21 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/panel">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://gamma.junohosting.net"
+          >
             Web Panel
-          </router-link>
+          </a>
         </li>
         <li>
-          <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/asfmaXr">
-            Support
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://discord.gg/asfmaXr"
+          >
+            Discord
           </a>
         </li>
       </ul>
@@ -33,22 +44,42 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { defineComponent } from 'vue'
 
-@Component
-export default class Navbar extends Vue {}
+export default defineComponent({
+  name: 'Navbar',
+  data: () => ({
+    open: false
+  })
+})
 </script>
 
 <style lang="postcss" scoped>
-div {
-  margin-bottom: 5px;
+nav {
+  @apply
+    rounded
+    bg-gray-200
+    py-2 px-2;
 }
 
-ul li a {
-  @apply mr-3 inline-block border border-white rounded text-blue-500 py-1 px-3;
+ul li * {
+  @apply
+    mr-3
+    inline-block
+    rounded
+    text-blue-500
+    py-1 px-3;
 }
 
-a:hover {
-  @apply border-gray-200 bg-gray-200;
+ul li *:hover, ul li a:focus {
+  @apply bg-gray-300;
+}
+
+#title {
+  font-family: 'Permanent Marker';
+  @apply
+    ml-3
+    font-bold
+    text-lg;
 }
 </style>

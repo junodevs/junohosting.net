@@ -1,49 +1,112 @@
 <template>
-  <footer class="grid grid-cols-7 gap-2 mt-3">
-    <div class="col-span-3">
-      <span class="font-semibold">
-        Copyright &COPY; 2020 Juno Hosting
-      </span>
-    </div>
-    <div class="col-span-4">
-      <ul class="flex float-right">
-        <li>
-          <router-link to="/tos">
-            Terms of Service
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/privacy">
-            Privacy Policy
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/status">
-            Status
-          </router-link>
-        </li>
-      </ul>
-    </div>
+  <footer>
+    <section class="grid grid-cols-5">
+      <div class="col-span-2">
+        <h3 id="title">
+          Juno Hosting
+        </h3>
+      </div>
+      <div>
+        <h3>About</h3>
+        <ul>
+          <li>
+            <router-link
+              class="link"
+              to="/about"
+            >
+              About Us
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              class="link"
+              to="/legal/terms"
+            >
+              Terms of Service
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              class="link"
+              to="/legal/privacy"
+            >
+              Privacy Policy
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              class="link"
+              to="/about#branding"
+            >
+              Brand Guidelines
+            </router-link>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3>Platform</h3>
+        <ul>
+          <li>
+            <router-link
+              class="link"
+              to="/#plans"
+            >
+              VPS Pricing
+            </router-link>
+          </li>
+          <li>
+            <a
+              class="link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://gamma.junohosting.net"
+            >
+              Web Panel
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <ul>
+          <li>
+            <a
+              class="link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://discord.gg/asfmaXr"
+            >
+              Community Discord
+            </a>
+          </li>
+          <li>Helpdesk &amp; Customer Support</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      &COPY; 2020 Juno Devs
+    </section>
   </footer>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { defineComponent } from 'vue'
 
-@Component
-export default class Footer extends Vue {}
+export default defineComponent({
+  name: 'Footer'
+})
 </script>
 
 <style lang="postcss" scoped>
-div {
-  margin-bottom: 5px;
+#title {
+  font-family: 'Permanent Marker';
 }
 
-ul li a {
-  @apply mr-3 inline-block border border-white rounded text-blue-500 py-1 px-3;
-}
-
-a:hover {
-  @apply border-gray-200 bg-gray-200;
+footer {
+  @apply
+    rounded
+    bg-gray-200
+    py-2 px-4
+    mt-1;
 }
 </style>

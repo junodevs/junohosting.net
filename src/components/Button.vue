@@ -1,16 +1,25 @@
 <template>
   <router-link :to="to">
-    <span>Purchase</span>
+    <span>{{ name }}</span>
   </router-link>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { defineComponent } from 'vue'
 
-@Component
-export default class PurchaseButton extends Vue {
-  @Prop({ required: true }) private to!: string;
-}
+export default defineComponent({
+  name: 'Button',
+  props: {
+    name: {
+      type: String,
+      required: true
+    },
+    to: {
+      type: String,
+      required: true
+    }
+  }
+})
 </script>
 
 <style lang="postcss" scoped>
