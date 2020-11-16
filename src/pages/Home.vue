@@ -2,11 +2,11 @@
   <main>
     <section
       id="hero"
-      class="mt-5 container m-auto"
+      class="container m-auto"
     >
       <div class="lg:flex lg:p-0 p-7 justify-between items-center">
         <div class="lg:p-0 p-7">
-          <h1 class="text-4xl font-bold leading-tight mb-5">
+          <h1 class="text-4xl font-bold leading-tight mb-5 mt-0">
             Modern shared server hosting for everyone.
           </h1>
           <p class="text-xl">
