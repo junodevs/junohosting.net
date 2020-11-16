@@ -1,5 +1,6 @@
 import Home from './pages/Home.vue'
 import About from './pages/About.vue'
+import PrivacyPolicy from './pages/PrivacyPolicy.vue'
 import { createWebHistory, createRouter } from 'vue-router'
 
 export const router = createRouter({
@@ -8,6 +9,6 @@ export const router = createRouter({
     { path: '/', component: Home },
     { path: '/about', component: About },
     { path: '/legal/terms', redirect: '' },
-    { path: '/legal/privacy', redirect: '' }
+    { path: '/legal/privacy', component: PrivacyPolicy }
   ]
 })
