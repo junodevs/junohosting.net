@@ -20,7 +20,7 @@
           <li>
             <router-link
               class="link"
-              to="/legal/terms"
+              to="/terms"
             >
               Terms of Service
             </router-link>
@@ -28,7 +28,7 @@
           <li>
             <router-link
               class="link"
-              to="/legal/privacy"
+              to="/privacy"
             >
               Privacy Policy
             </router-link>

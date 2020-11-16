@@ -28,6 +28,10 @@ h3 {
   @apply font-bold text-xl my-3;
 }
 
+p {
+  @apply mb-2;
+}
+
 main {
   @apply py-2 px-2;
 }
