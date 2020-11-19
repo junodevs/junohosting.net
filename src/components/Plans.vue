@@ -55,8 +55,8 @@ export default defineComponent({
   data: () => ({
     plans: [
       { tier: 1, cores: 1, bw: 50, ram: 512, storage: 15, price: '2.50', mb: true },
-      { tier: 2, cores: 1, bw: 150, ram: 2, storage: 45, price: 10 },
-      { tier: 3, cores: 2, bw: 150, ram: 4, storage: 80, price: 12 },
+      { tier: 2, cores: 1, bw: 150, ram: 2, storage: 45, price: 5 },
+      { tier: 3, cores: 2, bw: 150, ram: 4, storage: 80, price: 10 },
       { tier: 4, cores: 4, bw: 150, ram: 16, storage: 120, price: 15 }
     ]
   })

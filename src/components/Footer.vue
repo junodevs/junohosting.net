@@ -5,6 +5,22 @@
         <h3 id="title">
           Juno Hosting
         </h3>
+        <div class="flex">
+          <a
+            class="mr-2"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/junohosting"
+          >
+            <twitter-icon size="1.25x" />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            href="mailto:hi@junohosting.net"
+          >
+            <mail-icon size="1.25x" />
+          </a>
+        </div>
       </div>
       <div>
         <h3>About</h3>
@@ -84,16 +100,21 @@
       </div>
     </section>
     <section>
-      &COPY; 2020 Juno Devs
+      &COPY; 2020 Juno Devs. All rights reserved.
     </section>
   </footer>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { TwitterIcon, MailIcon } from '@zhuowenli/vue-feather-icons'
 
 export default defineComponent({
-  name: 'Footer'
+  name: 'Footer',
+  components: {
+    TwitterIcon,
+    MailIcon
+  }
 })
 </script>
 

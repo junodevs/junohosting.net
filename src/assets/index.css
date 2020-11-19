@@ -7,6 +7,10 @@
   src: url("./PermanentMarker-Regular.ttf");
 }
 
+body {
+  overflow-y: scroll;
+}
+
 #app {
   max-width: 1050px;
   @apply
