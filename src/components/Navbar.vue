@@ -21,13 +21,9 @@
           </router-link>
         </li>
         <li>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://gamma.junohosting.net"
-          >
+          <router-link to="/panel">
             Web Panel
-          </a>
+          </router-link>
         </li>
         <li>
           <a

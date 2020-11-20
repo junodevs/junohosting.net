@@ -12,7 +12,7 @@ body {
 }
 
 #app {
-  max-width: 1050px;
+  max-width: 1100px;
   @apply
     py-2
     px-6
