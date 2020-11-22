@@ -7,12 +7,12 @@
       <div class="lg:flex lg:p-0 p-7 justify-between items-center">
         <div class="lg:p-0 p-7">
           <h1 class="text-4xl font-bold leading-tight mb-5 mt-0">
-            Modern shared server hosting for everyone.
+            Shared server hosting for all.
           </h1>
           <p class="text-xl">
-            We're a small team of 4 dedicated to delivering a superior
-            experience with an affordable price tag. Choosing Juno, you can
-            expect incredible reliability and quick support.
+            We're a small team dedicated to providing a top-notch experience at
+            an affordable price. With Juno Hosting, you can expect incredible
+            reliability and lightning fast support.
           </p>
           <div class="py-5">
             <a
@@ -33,17 +33,20 @@
     </section>
     <section id="features">
       <div>
-        <h1>Best in-class pricing</h1>
+        <h1>Best-in-class Pricing</h1>
         <p>
-          Juno Hosting circumvents many of the pitfalls our competitors face,
-          therefore we're able to provide the best VPS pricing in our class.
+          Juno Hosting circumvents common pitfalls of large scale competitors.
+          Our in-house billing system and panel allow us to control our
+          ecosystem and craft the experience we want to see in the hosting
+          market.
         </p>
       </div>
       <div>
-        <h1>Swift Support</h1>
+        <h1>Rapid Support</h1>
         <p>
-          Thanks to our small size Juno Hosting is able to deliever some of the
-          fastest support in the industry even with a small team.
+          Thanks to our small size, Juno Hosting delivers hasty support to all
+          customers at no additional cost. Representatives are experienced and
+          capable to resolve your query in minutes, not days.
         </p>
       </div>
     </section>
@@ -57,7 +60,7 @@
           class="link"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://discord.gg/asfmaXr"
+          href="mailto:hi@junohosting.net"
         >
           contact us.
         </a>

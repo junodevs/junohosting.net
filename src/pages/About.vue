@@ -16,36 +16,34 @@
       never oversell servers, and we ethically source our hardware and power.
       We maintain sustainably low pricing by eliminating the large overhead
       costs of typical small scale hosting companies. We currently have one
-      location in the San Francisco Bay Area with a PowerEdge R420.
+      location in the San Francisco Bay Area with a sole DELL PowerEdge R420.
     </p>
 
-    <h2>Branding</h2>
+    <section id="branding">
+      <h2>Branding</h2>
 
-    <div>
-      <h3>
-        Colors
-      </h3>
+      <section id="colors">
+        <h3>
+          Colors
+        </h3>
 
-      <div
-        id="colors"
-        class="flex"
-      >
-        <div
-          v-for="color in colors"
-          id="color-container"
-          :key="color"
-          class="w-1/6 mr-4"
-        >
+        <div class="flex">
           <div
-            :id="'color-' + color"
-            class="color h-64 rounded"
-          />
-          <p class="text-center mt-2 mb-3">
-            #{{ color }}
-          </p>
+            v-for="color in colors"
+            :key="color"
+            class="w-1/6 mr-4 color"
+          >
+            <div
+              :id="'color-' + color"
+              class="color h-64 rounded"
+            />
+            <p class="text-center mt-2 mb-3">
+              #{{ color }}
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
   </main>
 </template>
 
@@ -69,7 +67,7 @@ export default defineComponent({
 </script>
 
 <style lang="postcss" scoped>
-.color-container:last-child {
+.color:last-child {
   margin-right: 0px;
 }
 
@@ -85,19 +83,7 @@ export default defineComponent({
   overflow: auto;
 }
 
-h1 {
-  @apply font-bold text-3xl mb-2 mt-3;
-}
-
-h2 {
-  @apply font-bold text-2xl my-3;
-}
-
-h3 {
-  @apply font-bold text-xl my-3;
-}
-
 p {
-  @apply mt-2 text-lg;
+  @apply text-lg;
 }
 </style>
