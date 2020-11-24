@@ -1,26 +1,59 @@
 <template>
   <main>
-    <h1>About Juno Hosting</h1>
+    <h1 class="mb-2 mt-0">
+      About Juno Hosting
+    </h1>
 
-    <p>
-      Juno hosting is a modern boutique shared server hosting founded and ran by
-      <a
-        class="link"
-        href="https://junodevs.tech"
-      > Juno Devs</a>. We're a small
-      team of 4 dedicated to delivering a superior experience with an affordable
-      price tag.
-    </p>
-    <p>
-      Choosing Juno, you can expect incredible reliability and quick support. We
-      never oversell servers, and we ethically source our hardware and power.
-      We maintain sustainably low pricing by eliminating the large overhead
-      costs of typical small scale hosting companies. We currently have one
-      location in the San Francisco Bay Area with a sole DELL PowerEdge R420.
-    </p>
+    <section id="about">
+      <p>
+        Juno hosting is a boutique shared server hosting by
+        <a
+          class="link"
+          href="https://junodevs.tech"
+        > Juno Devs</a>. We're a small team dedicated to providing a top-notch
+        experience at an affordable price. With Juno Hosting, you can expect
+        incredible reliability and lightning fast support.
+      </p>
+      <p>
+        We never oversell servers and we maintain sustainably low pricing by
+        eliminating the large overhead costs of typical small scale hosting
+        companies. All servers are currently located in the San Francisco Bay
+        Area, California, utilizing Intel® Xeon® E5-2450. Servers run enterprise
+        hard drives with RAID redundancy in the case of hard drive failure,
+        equipped with DDR3 RAM & dual power supplies.
+      </p>
+
+      <h2>Our Commitments</h2>
+
+      <ul id="commitments">
+        <li>
+          We never oversell nodes
+        </li>
+        <li>
+          We ethically source our power and internet resources to reduce our
+          carbon footprint and emissions
+        </li>
+        <li>
+          We are deliberate and selective in our hardware purchasing process to
+          reduce potentional E-Waste when hardware is retired
+        </li>
+        <li>
+          We encourage and welcome diversity in our onboarding of new employees
+          amongst customers
+        </li>
+      </ul>
+    </section>
+
+    <section id="team-members">
+      <h1 class="text-center">
+        The Team
+      </h1>
+    </section>
 
     <section id="branding">
-      <h2>Branding</h2>
+      <h1 class="mb-0">
+        Branding
+      </h1>
 
       <section id="colors">
         <h3>
@@ -79,11 +112,16 @@ export default defineComponent({
 #color-5d737e { background-color: #5d737e; }
 #color-161925 { background-color: #161925; }
 
+#commitments {
+  list-style: inside;
+  @apply ml-3;
+}
+
 #colors {
   overflow: auto;
 }
 
-p {
+.subtitle {
   @apply text-lg;
 }
 </style>
