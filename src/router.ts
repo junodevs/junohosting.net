@@ -1,17 +1,28 @@
-import Home from './pages/Home.vue'
-import About from './pages/About.vue'
-import PrivacyPolicy from './pages/PrivacyPolicy.vue'
-import TermsOfService from './pages/TermsOfService.vue'
-import WebPanel from './pages/Panel.vue'
+import { defineAsyncComponent } from 'vue'
 import { createWebHistory, createRouter } from 'vue-router'
 
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', component: Home },
-    { path: '/about', component: About },
-    { path: '/terms', component: TermsOfService },
-    { path: '/privacy', component: PrivacyPolicy },
-    { path: '/panel', component: WebPanel }
+    {
+      path: '/',
+      component: defineAsyncComponent(() => import('./pages/Home.vue'))
+    },
+    {
+      path: '/about',
+      component: defineAsyncComponent(() => import('./pages/About.vue'))
+    },
+    {
+      path: '/terms',
+      component: defineAsyncComponent(() => import('./pages/TermsOfService.vue'))
+    },
+    {
+      path: '/privacy',
+      component: defineAsyncComponent(() => import('./pages/About.vue'))
+    },
+    {
+      path: '/panel',
+      component: defineAsyncComponent(() => import('./pages/Panel.vue'))
+    }
   ]
 })
