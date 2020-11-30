@@ -1,21 +1,29 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    node: true
   },
   extends: [
-    'plugin:vue/vue3-essential',
-    'plugin:vue/vue3-recommended',
+    'plugin:react/recommended',
     'standard'
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
     ecmaVersion: 12,
-    parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },
   plugins: [
-    'vue',
+    'react',
     '@typescript-eslint'
   ],
-  rules: {}
+  rules: {
+    // suppress errors for missing 'import React' in files
+    'react/react-in-jsx-scope': 'off',
+    // allow jsx syntax in js files (for next.js project)
+    'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }]
+  }
 }
