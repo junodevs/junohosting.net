@@ -9,6 +9,7 @@
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.3.1",
     "@types/classnames": "^2.2.11",
     "classnames": "^2.2.6",
     "next": "^10.0.3",

@@ -122,7 +122,7 @@ export default function Home () {
             return (
               <div key="tier">
                 <ProductCard tier={vps.tier} price={vps.price}>
-                  <ul>
+                  <ul className="list">
                     <li>{vps.cores} vCPU{vps.cores === 1 ? 's' : ''}</li>
                     <li>{vps.memory} of RAM</li>
                     <li>{vps.bandwidth} MB/s</li>
