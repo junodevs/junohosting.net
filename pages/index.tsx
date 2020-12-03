@@ -1,6 +1,7 @@
+import Head from 'next/head'
 import CallToAction from '../components/cta'
 import Hero from '../components/hero'
-import Layout from '../components/layout'
+import Layout, { siteTitle } from '../components/layout'
 import ProductCard from '../components/productCard'
 
 const lipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae dignissim ligula. Vivamus sagittis, mi sed condimentum accumsan, lectus massa.'
@@ -86,6 +87,16 @@ const plans: {
 export default function Home () {
   return (
     <Layout>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="We're a small team dedicated to providing a top-notch experience at an affordable price. With Juno Hosting, you can expect incredible reliability and lightning support."
+        />
+
+        <link rel="icon" href="/favicon.ico"/>
+        <title>{siteTitle}</title>
+      </Head>
       <Hero />
       <section id="features">
         <div className="mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-2 grid-cols-1 grid-rows-8 sm:grid-cols-2 sm:grid-rows-4 md:grid-cols-4 md:grid-rows-2">

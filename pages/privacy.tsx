@@ -1,8 +1,19 @@
-import Layout from '../components/layout'
+import Layout, { siteTitle } from '../components/layout'
+import Head from 'next/head'
 
 export default function PrivacyPolicy () {
   return (
     <Layout>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Learn how to build a personal website with Next.js"
+        />
+
+        <link rel="icon" href="/favicon.ico"/>
+        <title>{siteTitle}</title>
+      </Head>
       <article className="prose mx-auto">
         <h1>Privacy Policy</h1>
         <p>
