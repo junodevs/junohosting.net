@@ -12,4 +12,6 @@ body {
 @tailwind utilities;
 /* Stop purging. */
 
-/* Your own custom utilities */
+ul {
+  list-style: inside;
+}

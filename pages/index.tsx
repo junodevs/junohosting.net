@@ -1,6 +1,7 @@
 import CallToAction from '../components/cta'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
+import ProductCard from '../components/productCard'
 
 const lipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae dignissim ligula. Vivamus sagittis, mi sed condimentum accumsan, lectus massa.'
 const features: {
@@ -40,6 +41,47 @@ const features: {
     blurb: lipsum
   }
 ]
+const plans: {
+  cores: number;
+  tier: number;
+  bandwidth: number;
+  memory: string;
+  price: number | string;
+  storage: number;
+}[] = [
+  {
+    cores: 1,
+    bandwidth: 50,
+    price: '2.50',
+    memory: '512 MB',
+    storage: 15,
+    tier: 1
+  },
+  {
+    cores: 1,
+    bandwidth: 150,
+    price: 5,
+    memory: '2 GB',
+    storage: 45,
+    tier: 2
+  },
+  {
+    cores: 2,
+    bandwidth: 150,
+    memory: '4 GB',
+    price: 10,
+    storage: 80,
+    tier: 3
+  },
+  {
+    cores: 4,
+    bandwidth: 150,
+    memory: '8 GB',
+    price: 15,
+    storage: 120,
+    tier: 4
+  }
+]
 
 export default function Home () {
   return (
@@ -62,6 +104,55 @@ export default function Home () {
         </div>
       </section>
       <CallToAction />
+      <section id="plans">
+        <div className="text-center">
+          <h1
+            className="my-1 text-4xl font-extrabold tracking-tight text-gray-900"
+          >
+            Plans
+          </h1>
+          <p className="max-w-xl mx-auto">
+            Juno Hosting offers four distinct tiers of VPS&apos; plans each
+            designed to suit your best interests. All systems have a soft data
+            transfer limit of 500GB.
+          </p>
+        </div>
+        <div className="mt-8 mb-20 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-3 grid-rows-2 gap-4">
+          {plans.map(vps => {
+            return (
+              <div key="tier">
+                <ProductCard tier={vps.tier} price={vps.price}>
+                  <ul>
+                    <li>{vps.cores} vCPU{vps.cores === 1 ? 's' : ''}</li>
+                    <li>{vps.memory} of RAM</li>
+                    <li>{vps.bandwidth} MB/s</li>
+                    <li>{vps.storage} GB of Storage</li>
+                  </ul>
+                </ProductCard>
+              </div>
+            )
+          })}
+          <div className="col-span-2">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+              <div className="px-4 py-2">
+                <h1 className="text-gray-900 font-bold text-2xl">
+                  Need a custom solution?
+                </h1>
+                <p className="text-gray-600 text-sm mt-1 mb-5">
+                  Juno Hosting&apos;s primary goal is to provide the best
+                  possible experience to you &mdash; the customer &mdash;
+                  therefore we offer any custom VPS tier you request.
+                </p>
+              </div>
+              <div className="items-center flex bg-gray-900 justify-end px-4 py-2">
+                <button className="px-3 py-1 bg-gray-200 text-sm text-gray-900 font-semibold rounded">
+                  Contact Us
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   )
 }
