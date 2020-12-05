@@ -27,7 +27,7 @@ export default function Navbar () {
           {entries.map(({ href, label, local }) => {
             return (
               <li
-                className="mr-3 inline-block font-semibold text-indigo-600 hover:text-purple-500 py-1 px-3"
+                className="mr-3 inline-block font-semibold text-indigo-600 hover:text-indigo-700 py-1 px-3"
                 key={label}
               >
                 {local
