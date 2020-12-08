@@ -115,6 +115,30 @@ export default function Home () {
         </div>
       </section>
       <CallToAction />
+      <section
+        id="about-us"
+        className="bg-gradient-to-r from-indigo-500 to-indigo-600 mb-8"
+      >
+        <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+          <div>
+            <h2 className="mt-2 text-4xl font-bold font-display text-white">
+              About Juno Hosting
+            </h2>
+            <p className="mt-4 text-lg text-gray-300">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              varius neque enim, non sodales massa pretium eu. Nunc lacinia
+              metus quis gravida vestibulum. Vivamus fringilla condimentum
+              neque, eu malesuada massa rhoncus eget. Cras malesuada tincidunt
+              risus sed sodales. Vestibulum aliquam vel orci ut pellentesque.
+              Mauris rhoncus eleifend libero, id scelerisque orci aliquet ut.
+              Curabitur bibendum vulputate turpis, id blandit massa ultricies a.
+              Nulla et tristique arcu. Quisque eu mauris consectetur, efficitur
+              mauris id, dignissim massa. Orci varius natoque penatibus et
+              magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+          </div>
+        </div>
+      </section>
       <section id="plans">
         <div className="text-center">
           <h1
@@ -132,7 +156,7 @@ export default function Home () {
           {plans.map(vps => {
             return (
               <div key="tier">
-                <ProductCard tier={vps.tier} price={vps.price} primary={vps.tier === 2}>
+                <ProductCard tier={vps.tier} price={vps.price}>
                   <ul className="list">
                     <li>{vps.cores} vCPU{vps.cores === 1 ? 's' : ''}</li>
                     <li>{vps.memory} of RAM</li>
@@ -155,7 +179,7 @@ export default function Home () {
                   therefore we offer any custom VPS tier you request.
                 </p>
               </div>
-              <div className="items-center flex bg-gray-900 justify-end px-4 py-2">
+              <div className="flex bg-gray-900 justify-end px-4 py-2">
                 <button
                   className="px-3 py-1 bg-gray-200 hover:bg-gray-300 text-sm text-gray-900 font-semibold rounded"
                 >

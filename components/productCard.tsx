@@ -1,8 +1,5 @@
-import cn from 'classnames'
-
-export default function ProductCard ({ price, primary = false, tier, children }: {
+export default function ProductCard ({ price, tier, children }: {
   price: number | string,
-  primary?: boolean,
   tier: number | string,
   children: React.ReactNode
 }) {

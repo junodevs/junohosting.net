@@ -4,9 +4,12 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}'
   ],
   darkMode: 'media',
-  variants: {
-    extend: {}
+  theme: {
+    extend: {
+      colors: require('tailwindcss/colors')
+    }
   },
+  variants: {},
   plugins: [
     require('@tailwindcss/typography')
   ]
