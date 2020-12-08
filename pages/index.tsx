@@ -94,7 +94,8 @@ export default function Home () {
           content="We're a small team dedicated to providing a top-notch experience at an affordable price. With Juno Hosting, you can expect incredible reliability and lightning support."
         />
 
-        <link rel="icon" href="/favicon.ico"/>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="alternate icon" href="/favicon.ico" />
         <title>{siteTitle}</title>
       </Head>
       <Hero />
