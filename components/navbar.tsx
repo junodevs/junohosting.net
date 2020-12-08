@@ -6,7 +6,7 @@ const entries: {
   local: boolean;
 }[] = [
   { href: '/', label: 'Home', local: true },
-  { href: '/about', label: 'About', local: true },
+  { href: '/faq', label: 'FAQ', local: true },
   { href: '/panel', label: 'Web Panel', local: true },
   { href: 'https://discord.gg/asfmaXr', label: 'Discord', local: false }
 ]
@@ -27,17 +27,21 @@ export default function Navbar () {
           {entries.map(({ href, label, local }) => {
             return (
               <li
-                className="mr-3 inline-block font-semibold text-indigo-600 hover:text-indigo-700 py-1 px-3"
+                className="mr-3 inline-block font-semibold py-1 px-3"
                 key={label}
               >
                 {local
                   ? (
                       <Link href={href}>
-                        <a>{label}</a>
+                        <a className="text-indigo-600 hover:underline">
+                          {label}
+                        </a>
                       </Link>
                     )
                   : (
-                      <a href={href}>{label}</a>
+                      <a className="text-indigo-600 hover:underline" href={href}>
+                        {label}
+                      </a>
                     )}
               </li>
             )
