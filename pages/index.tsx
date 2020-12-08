@@ -114,7 +114,7 @@ export default function Home () {
           })}
         </div>
       </section>
-      <CallToAction />
+      <CallToAction to="#plans" />
       <section
         id="about-us"
         className="bg-gradient-to-r from-indigo-500 to-indigo-600 mb-8"
