@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://junohosting.net/</loc>
+    <lastmod>2020-12-08T07:31:50+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://junohosting.net/tos</loc>
+    <lastmod>2020-12-08T07:31:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://junohosting.net/privacy</loc>
+    <lastmod>2020-12-08T07:31:50+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>
