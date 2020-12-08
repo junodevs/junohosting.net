@@ -11,8 +11,7 @@ export default function TermsOfService () {
           content="Learn how to build a personal website with Next.js"
         />
 
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="alternate icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
 
         <title>{siteTitle}</title>
       </Head>
