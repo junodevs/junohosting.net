@@ -132,7 +132,7 @@ export default function Home () {
           {plans.map(vps => {
             return (
               <div key="tier">
-                <ProductCard tier={vps.tier} price={vps.price}>
+                <ProductCard tier={vps.tier} price={vps.price} primary={vps.tier === 2}>
                   <ul className="list">
                     <li>{vps.cores} vCPU{vps.cores === 1 ? 's' : ''}</li>
                     <li>{vps.memory} of RAM</li>
@@ -156,7 +156,9 @@ export default function Home () {
                 </p>
               </div>
               <div className="items-center flex bg-gray-900 justify-end px-4 py-2">
-                <button className="px-3 py-1 bg-gray-200 text-sm text-gray-900 font-semibold rounded">
+                <button
+                  className="px-3 py-1 bg-gray-200 hover:bg-gray-300 text-sm text-gray-900 font-semibold rounded"
+                >
                   Contact Us
                 </button>
               </div>
