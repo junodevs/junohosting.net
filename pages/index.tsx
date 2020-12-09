@@ -118,11 +118,11 @@ export default function Home () {
       <CallToAction to="#plans" />
       <section id="about-us">
         <div
-          className="max-w-4xl rounded-lg mx-auto bg-transparent border-4 border-indigo-600 shadow-lg mb-7"
+          className="max-w-4xl rounded-lg mx-auto border-4 border-indigo-600 shadow-lg mb-7"
         >
           <div className="text-indigo-600 py-4 px-6">
             <h2 className="mt-2 text-4xl font-bold font-display">
-              About Juno Hosting.
+              About Juno Hosting
             </h2>
             <p className="mt-4 text-lg text-gray-900">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
