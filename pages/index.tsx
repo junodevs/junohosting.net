@@ -116,16 +116,15 @@ export default function Home () {
         </div>
       </section>
       <CallToAction to="#plans" />
-      <section
-        id="about-us"
-        className="bg-gradient-to-r from-indigo-500 to-indigo-600 mb-8"
-      >
-        <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div>
-            <h2 className="mt-2 text-4xl font-bold font-display text-white">
-              About Juno Hosting
+      <section id="about-us">
+        <div
+          className="max-w-4xl rounded-lg mx-auto bg-transparent border-4 border-indigo-600 shadow-lg mb-7"
+        >
+          <div className="text-indigo-600 py-4 px-6">
+            <h2 className="mt-2 text-4xl font-bold font-display">
+              About Juno Hosting.
             </h2>
-            <p className="mt-4 text-lg text-gray-300">
+            <p className="mt-4 text-lg text-gray-900">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               varius neque enim, non sodales massa pretium eu. Nunc lacinia
               metus quis gravida vestibulum. Vivamus fringilla condimentum
@@ -137,6 +136,11 @@ export default function Home () {
               mauris id, dignissim massa. Orci varius natoque penatibus et
               magnis dis parturient montes, nascetur ridiculus mus.
             </p>
+          </div>
+          <div className="bg-indigo-600 text-white">
+            <div className="py-2 ml-4 px-6">
+              &mdash; Max Bromberg, founder and CEO of Juno Hosting.
+            </div>
           </div>
         </div>
       </section>
