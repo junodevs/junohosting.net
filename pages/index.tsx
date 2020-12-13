@@ -4,42 +4,44 @@ import Hero from '../components/hero'
 import Layout, { siteTitle } from '../components/layout'
 import ProductCard from '../components/productCard'
 
-const lipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae dignissim ligula. Vivamus sagittis, mi sed condimentum accumsan, lectus massa.'
 const features: {
   title: string;
   blurb: string
 }[] = [
   {
-    title: 'Easily scalable',
-    blurb: lipsum
-  },
-  {
-    title: 'Start for $2.50/mo',
-    blurb: lipsum
+    title: 'We don\'t nickel and dime',
+    blurb: `Get what you pay for, and more. All transfer limits are soft caps.
+    IPv6 /64 subnet included with all machines. Contact support for help setting
+    up your new machine at no extra cost.`
   },
   {
     title: 'Modern hardware',
-    blurb: lipsum
+    blurb: `All nodes are running on modern hardware, utilizing the latest in
+    virtualization and redundancy, providing for incredible reliability when it
+    matters most.`
   },
   {
     title: 'Rapid support',
-    blurb: lipsum
+    blurb: `Extremely fast support from skilled representatives. With 3 mediums
+    of contact, get any issues resolved within hours, not days.`
   },
   {
     title: 'Ethical infrastructure',
-    blurb: lipsum
+    blurb: `We take extreme care in sourcing our power and internet resources to
+    reduce our carbon footprint. We are deliberate in our hardware selection to
+    reduce E-Waste when hardware is retired.`
   },
   {
     title: 'Plenty of options',
-    blurb: lipsum
+    blurb: `Have a different plan in mind? Contact us to craft your own solution
+    and get it deployed.`
   },
   {
     title: 'Backed by Open Source',
-    blurb: lipsum
-  },
-  {
-    title: 'Best-in-class Pricing',
-    blurb: lipsum
+    blurb: `We support Open Source. 99% of code for our billing platform is
+    available, and <a class="text-indigo-600 hover:underline"
+    href="https://junodevs.tech">we've been building for the
+    open source community for months</a>.`
   }
 ]
 const plans: {
@@ -100,16 +102,17 @@ export default function Home () {
       </Head>
       <Hero />
       <section id="features">
-        <div className="mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-2 grid-cols-1 grid-rows-8 sm:grid-cols-2 sm:grid-rows-4 md:grid-cols-4 md:grid-rows-2">
+        <div className="mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-2 grid-cols-1 grid-rows-6 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2">
           {features.map(({ title, blurb }) => {
             return (
               <div className="mb-8" key={title}>
                 <h2 className="mt-1 text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">
                   {title}
                 </h2>
-                <p className="text-gray-900 mt-2">
-                  {blurb}
-                </p>
+                <p
+                  className="text-gray-900 mt-2"
+                  dangerouslySetInnerHTML={{ __html: blurb }}
+                />
               </div>
             )
           })}
