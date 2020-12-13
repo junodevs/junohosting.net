@@ -125,16 +125,14 @@ export default function Home () {
               About Juno Hosting
             </h2>
             <p className="mt-4 text-lg text-gray-900">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              varius neque enim, non sodales massa pretium eu. Nunc lacinia
-              metus quis gravida vestibulum. Vivamus fringilla condimentum
-              neque, eu malesuada massa rhoncus eget. Cras malesuada tincidunt
-              risus sed sodales. Vestibulum aliquam vel orci ut pellentesque.
-              Mauris rhoncus eleifend libero, id scelerisque orci aliquet ut.
-              Curabitur bibendum vulputate turpis, id blandit massa ultricies a.
-              Nulla et tristique arcu. Quisque eu mauris consectetur, efficitur
-              mauris id, dignissim massa. Orci varius natoque penatibus et
-              magnis dis parturient montes, nascetur ridiculus mus.
+              I created Juno Hosting because I saw a lack of quality and care in
+              the hosting industry. Juno Hosting was founded on the notion that
+              anyone should be able to share their ideas with the world. From
+              artists to software developers, everyone should have access to
+              performative server options that bring their ideas to life.
+              Whether you&apos;re creating a personal website or a gaming
+              adventure, making it shouldn&apos;t cost an arm and a leg.
+              I&apos;m confident you&apos;ll find your solution in Juno Hosting.
             </p>
           </div>
           <div className="bg-indigo-600 text-white">
@@ -152,9 +150,8 @@ export default function Home () {
             Plans
           </h1>
           <p className="max-w-xl mx-auto">
-            Juno Hosting offers four distinct tiers of VPS&apos; plans each
-            designed to suit your best interests. All systems have a soft data
-            transfer limit of 500GB.
+            We offer four distinct tiers of VPS&apos; designed to meet common
+            use cases. All systems have a soft data transfer limit of 500GB.
           </p>
         </div>
         <div className="mt-8 mb-20 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-3 grid-rows-2 gap-4">
@@ -178,10 +175,9 @@ export default function Home () {
                 <h1 className="text-gray-900 font-bold text-2xl">
                   Need a custom solution?
                 </h1>
-                <p className="text-gray-600 text-sm mt-1 mb-5">
-                  Juno Hosting&apos;s primary goal is to provide the best
-                  possible experience to you &mdash; the customer &mdash;
-                  therefore we offer any custom VPS tier you request.
+                <p className="text-gray-600 text-sm mt-1 mb-10">
+                  We&apos;ll work with you to create exactly what you need for
+                  your circumstances. Contact us to get started.
                 </p>
               </div>
               <div className="flex bg-gray-900 justify-end px-4 py-2">
