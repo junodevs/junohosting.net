@@ -7,8 +7,8 @@ const entries: {
 }[] = [
   { href: '/', label: 'Home', local: true },
   { href: '/faq', label: 'FAQ', local: true },
-  { href: '/panel', label: 'Web Panel', local: true },
-  { href: 'https://discord.gg/asfmaXr', label: 'Discord', local: false }
+  { href: 'https://billing.junohosting.net', label: 'Client Area', local: false },
+  { href: 'https://discord.gg/asfmaXr', label: 'Contact Us', local: false }
 ]
 
 export default function Navbar () {
