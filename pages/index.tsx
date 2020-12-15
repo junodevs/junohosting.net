@@ -102,11 +102,11 @@ export default function Home () {
       </Head>
       <Hero />
       <section id="features">
-        <div className="mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-2 grid-cols-1 grid-rows-6 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2">
+        <div className="mt-8 mb-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-4 grid-cols-1 grid-rows-6 md:grid-cols-3 md:grid-rows-2">
           {features.map(({ title, blurb }) => {
             return (
-              <div className="mb-8" key={title}>
-                <h2 className="mt-1 text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">
+              <div key={title}>
+                <h2 className="text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">
                   {title}
                 </h2>
                 <p
@@ -119,13 +119,14 @@ export default function Home () {
         </div>
       </section>
       <CallToAction to="#plans" />
-      <section id="about-us">
+      <section id="about-us" className="px-3 sm:px-0">
         <div
           className="max-w-4xl rounded-lg mx-auto border-4 border-indigo-600 shadow-lg mb-7"
         >
           <div className="text-indigo-600 py-4 px-6">
             <h2 className="mt-2 text-4xl font-bold font-display">
-              About Juno Hosting
+              About <span className="hidden sm:inline-block">Juno Hosting</span>
+              <span className="inline-block sm:hidden">Us</span>
             </h2>
             <p className="mt-4 text-lg text-gray-900">
               I created Juno Hosting because I saw a lack of quality and care in
@@ -139,7 +140,7 @@ export default function Home () {
             </p>
           </div>
           <div className="bg-indigo-600 text-white">
-            <div className="py-2 ml-4 px-6">
+            <div className="py-2 sm:ml-4 px-6">
               &mdash; Max Bromberg, founder and CEO of Juno Hosting.
             </div>
           </div>
@@ -157,7 +158,7 @@ export default function Home () {
             use cases. All systems have a soft data transfer limit of 500GB.
           </p>
         </div>
-        <div className="mt-8 mb-20 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-3 grid-rows-2 gap-4">
+        <div className="my-8 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 grid-rows-5 sm:grid-cols-3 sm:grid-rows-2 gap-4">
           {plans.map(vps => {
             return (
               <div key="tier">
@@ -172,7 +173,7 @@ export default function Home () {
               </div>
             )
           })}
-          <div className="col-span-2">
+          <div className="sm:col-span-2">
             <div className="bg-white shadow-lg rounded-lg overflow-hidden">
               <div className="px-4 py-2">
                 <h1 className="text-gray-900 font-bold text-2xl">
