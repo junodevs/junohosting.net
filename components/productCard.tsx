@@ -1,6 +1,6 @@
 export default function ProductCard ({ price, tier, children }: {
   price: number | string,
-  tier: number | string,
+  tier: number,
   children: React.ReactNode
 }) {
   return (
@@ -13,11 +13,12 @@ export default function ProductCard ({ price, tier, children }: {
       </div>
       <div className="bg-gray-900 flex items-center justify-between px-4 py-2">
         <h1 className="text-gray-200 font-bold text-xl">${price}/mo</h1>
-        <button
+        <a
+          href={`https://billing.junohosting.net/order/config/index/vps/?group_id=10&pricing_id=${tier}`}
           className="px-3 py-1 bg-gray-200 hover:bg-gray-300 text-sm text-gray-900 font-semibold rounded"
         >
           Purchase
-        </button>
+        </a>
       </div>
     </div>
   )
