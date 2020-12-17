@@ -8,8 +8,7 @@ const entries: {
   { href: '/', label: 'Home', local: true },
   { href: '/tos', label: 'Terms Of Service', local: true },
   { href: '/privacy', label: 'Privacy Policy', local: true },
-  { href: 'https://billing.junohosting.net', label: 'Client Area', local: false },
-  { href: 'https://discord.gg/asfmaXr', label: 'Discord Server', local: false }
+  { href: 'https://billing.junohosting.net', label: 'Client Area', local: false }
 ]
 
 export default function Footer () {
