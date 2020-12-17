@@ -119,7 +119,7 @@ export default function Home () {
         </div>
       </section>
       <CallToAction to="#plans" />
-      <section id="about-us" className="px-3 sm:px-0">
+      <section id="about-us" className="px-3 lg:px-0">
         <div
           className="max-w-4xl rounded-lg mx-auto border-4 border-indigo-600 shadow-lg mb-7"
         >
