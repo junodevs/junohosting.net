@@ -6,7 +6,6 @@ const entries: {
   local: boolean;
 }[] = [
   { href: '/', label: 'Home', local: true },
-  { href: '/faq', label: 'FAQ', local: true },
   { href: 'https://billing.junohosting.net', label: 'Client Area', local: false },
   { href: 'https://discord.gg/asfmaXr', label: 'Contact Us', local: false }
 ]

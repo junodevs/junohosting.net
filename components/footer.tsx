@@ -1,45 +1,48 @@
 import Link from 'next/link'
 
+const entries: {
+  href: string;
+  label: string;
+  local: boolean;
+}[] = [
+  { href: '/', label: 'Home', local: true },
+  { href: '/tos', label: 'Terms Of Service', local: true },
+  { href: '/privacy', label: 'Privacy Policy', local: true },
+  { href: 'https://billing.junohosting.net', label: 'Client Area', local: false },
+  { href: 'https://discord.gg/asfmaXr', label: 'Discord Server', local: false }
+]
+
 export default function Footer () {
   return (
     <footer className="flex justify-center text-center">
       <div>
         <section id="pages" className="mb-3">
           <ul className="flex">
-            <li className="mr-2">
-              <Link href="/">
-                <a className="text-indigo-600 hover:underline">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="mr-2">
-              <Link href="/tos">
-                <a className="text-indigo-600 hover:underline">
-                  Terms Of Service
-                </a>
-              </Link>
-            </li>
-            <li className="mr-2">
-              <Link href="/privacy">
-                <a className="text-indigo-600 hover:underline">
-                  Privacy Policy
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/faq">
-                <a className="text-indigo-600 hover:underline">
-                  FAQ
-                </a>
-              </Link>
-            </li>
+            {entries.map(({ href, label, local }) => {
+              return (
+                <li className="mr-3" key={label}>
+                  {local
+                    ? (
+                        <Link href={href}>
+                          <a className="text-indigo-600 hover:underline">
+                            {label}
+                          </a>
+                        </Link>
+                      )
+                    : (
+                        <a className="text-indigo-600 hover:underline" href={href}>
+                          {label}
+                        </a>
+                      )}
+                </li>
+              )
+            })}
           </ul>
         </section>
         <section id="socials" className="flex justify-center mb-3">
           <a
             href="https://twitter.com/junohosting"
-            className="mr-2"
+            className="mr-2 hover:text-indigo-600"
             aria-label="Twitter"
           >
             <svg
@@ -59,7 +62,7 @@ export default function Footer () {
           </a>
           <a
             href="https://github.com/junodevs"
-            className="mr-2"
+            className="mr-2 hover:text-indigo-600"
             aria-label="Github"
           >
             <svg
@@ -79,7 +82,7 @@ export default function Footer () {
           </a>
           <a
             href="https://discord.gg/asfmaXr"
-            className="mr-2"
+            className="mr-2 hover:text-indigo-600"
             aria-label="Discord"
           >
             <svg
@@ -99,7 +102,7 @@ export default function Footer () {
           </a>
           <a
             href="mailto:hi@junohosting.net"
-            className="mr-2"
+            className="mr-2 hover:text-indigo-600"
             aria-label="E-Mail"
           >
             <svg
