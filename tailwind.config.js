@@ -6,7 +6,10 @@ module.exports = {
   darkMode: 'media',
   theme: {
     extend: {
-      colors: require('tailwindcss/colors')
+      colors: require('tailwindcss/colors'),
+      margin: {
+        9.5: '2.45rem'
+      }
     }
   },
   variants: {},

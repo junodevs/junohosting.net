@@ -179,17 +179,18 @@ export default function Home () {
                 <h1 className="text-gray-900 font-bold text-2xl">
                   Need a custom solution?
                 </h1>
-                <p className="text-gray-600 text-sm mt-1 mb-10">
+                <p className="text-gray-600 text-sm mt-1 mb-9.5">
                   We&apos;ll work with you to create exactly what you need for
                   your circumstances. Contact us to get started.
                 </p>
               </div>
               <div className="flex bg-gray-900 justify-end px-4 py-2">
-                <button
+                <a
+                  href="mailto:hi@junohosting.net"
                   className="px-3 py-1 bg-gray-200 hover:bg-gray-300 text-sm text-gray-900 font-semibold rounded"
                 >
                   Contact Us
-                </button>
+                </a>
               </div>
             </div>
           </div>
