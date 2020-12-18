@@ -33,9 +33,9 @@ export default function TermsOfService () {
           This Agreement is entered into between:
           <ul>
             <li>
-              the Juno Hosting Sole Proprietor, 680 Penny Lane, Illinois, USA 60031,
-              a Sole Proprietor under the laws of the United States of America and
-              the state of Illinois, hereinafter called &quot;Juno,&quot;
+              the Juno Hosting Sole Proprietor, a Sole Proprietor under the laws
+              of the United States of America and the state of Illinois,
+              hereinafter called &quot;Juno,&quot;
             </li>
             <li>
               and any person or corporation, individual or professional, private or
