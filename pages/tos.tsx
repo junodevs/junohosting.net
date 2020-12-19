@@ -23,10 +23,10 @@ export default function TermsOfService () {
       </Head>
       <article className="prose mx-auto">
         <h1>
-          GENERAL TERMS AND CONDITIONS OF SERVICE
+          General Terms and Conditions of Service
         </h1>
         <p>
-          <strong>Latest Version on November 6th, 2020</strong>
+          <strong>Last Updated on December 18th, 2020</strong>
         </p>
 
         <p>
