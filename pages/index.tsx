@@ -27,15 +27,15 @@ const features: {
     matters most.`
   },
   {
-    title: 'Rapid support',
-    blurb: `Extremely fast support from skilled representatives. With 3 mediums
-    of contact, get any issues resolved within hours, not days.`
+    title: 'Ethical Infrastructure',
+    blurb: `We take extreme care in sourcing our power and internet resources to
+    minimize our carbon footprint. We select our hardware to reduce E-Waste when
+    hardware is retired.`
   },
   {
-    title: 'Ethical infrastructure',
-    blurb: `We take extreme care in sourcing our power and internet resources to
-    reduce our carbon footprint. We are deliberate in our hardware selection to
-    reduce E-Waste when hardware is retired.`
+    title: 'Rapid Support',
+    blurb: `Extremely fast support from skilled representatives gets any issues
+    resolved within hours, not days.`
   },
   {
     title: 'Plenty of options',
@@ -50,6 +50,7 @@ const features: {
     open source community for months</a>.`
   }
 ]
+
 const plans: {
   cores: number;
   tier: number;
@@ -179,7 +180,7 @@ export default function Home () {
               </div>
             )
           })}
-          <div className="sm:col-span-2">
+          <div className="sm:col-span-2 h-full">
             <div className="bg-white shadow-lg rounded-lg overflow-hidden">
               <div className="px-4 py-2">
                 <h1 className="text-gray-900 font-bold text-2xl">
