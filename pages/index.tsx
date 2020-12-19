@@ -17,8 +17,10 @@ const features: {
   {
     title: 'We don\'t nickel and dime',
     blurb: `Get what you pay for, and more. All transfer limits are soft caps.
-    IPv6 /64 subnet included with all machines. Contact support for help setting
-    up your new machine at no extra cost.`
+    IPv6 /64 subnet included with all machines.
+    <a class="text-indigo-600 hover:underline" href="mailto:hi@junohosting.net">
+      Contact us
+    </a> for help setting up your new machine at no extra cost.`
   },
   {
     title: 'Modern hardware',
@@ -58,6 +60,7 @@ const plans: {
   memory: string;
   price: number | string;
   storage: number;
+  goodFor: string;
 }[] = [
   {
     cores: 1,
@@ -65,7 +68,8 @@ const plans: {
     price: '2.50',
     memory: '512 MB',
     storage: 15,
-    tier: 1
+    tier: 1,
+    goodFor: 'chat bots'
   },
   {
     cores: 1,
@@ -73,7 +77,8 @@ const plans: {
     price: 5,
     memory: '2 GB',
     storage: 45,
-    tier: 2
+    tier: 2,
+    goodFor: 'web servers'
   },
   {
     cores: 2,
@@ -81,7 +86,8 @@ const plans: {
     memory: '4 GB',
     price: 10,
     storage: 80,
-    tier: 3
+    tier: 3,
+    goodFor: 'game servers'
   },
   {
     cores: 4,
@@ -89,7 +95,8 @@ const plans: {
     memory: '8 GB',
     price: 15,
     storage: 120,
-    tier: 4
+    tier: 4,
+    goodFor: 'multiple containers'
   }
 ]
 
@@ -175,6 +182,7 @@ export default function Home () {
                     <li>{vps.memory} of RAM</li>
                     <li>{vps.bandwidth} MB/s</li>
                     <li>{vps.storage} GB of Storage</li>
+                    <li>Good for {vps.goodFor}</li>
                   </ul>
                 </ProductCard>
               </div>
@@ -186,7 +194,7 @@ export default function Home () {
                 <h1 className="text-gray-900 font-bold text-2xl">
                   Need a custom solution?
                 </h1>
-                <p className="text-gray-600 text-sm mt-1 mb-9.5">
+                <p className="text-gray-600 text-sm mt-1 mb-15">
                   We&apos;ll work with you to create exactly what you need for
                   your circumstances. Contact us to get started.
                 </p>

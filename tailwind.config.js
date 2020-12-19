@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       colors: require('tailwindcss/colors'),
       margin: {
-        9.5: '2.45rem'
+        15: '3.7rem'
       }
     }
   },
