@@ -178,7 +178,7 @@ export default function Home () {
               <div key="tier">
                 <ProductCard tier={vps.tier} price={vps.price}>
                   <ul className="list">
-                    <li>{vps.cores} vCPU{vps.cores === 1 ? 's' : ''}</li>
+                    <li>{vps.cores} vCPU{vps.cores === 1 ? '' : 's'}</li>
                     <li>{vps.memory} of RAM</li>
                     <li>{vps.bandwidth} MB/s</li>
                     <li>{vps.storage} GB of Storage</li>
