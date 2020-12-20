@@ -96,7 +96,7 @@ const plans: {
     price: 15,
     storage: 120,
     tier: 4,
-    goodFor: 'multiple containers'
+    goodFor: 'Docker'
   }
 ]
 
