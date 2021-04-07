@@ -15,7 +15,7 @@ export default function ProductCard ({ price, tier, children }: {
         <h1 className="text-gray-900 text-center font-bold text-2xl">
           Tier {tier}
         </h1>
-        <p className="text-gray-600 text-sm mt-1">{children}</p>
+        <div className="text-gray-600 text-sm mt-1">{children}</div>
       </div>
       <div className="bg-gray-900 flex items-center justify-between px-4 py-2">
         <h1 className="text-gray-200 font-bold text-xl">${price}/mo</h1>

@@ -18,8 +18,8 @@ const entries: {
 
 export default function Navbar () {
   return (
-    <nav className="grid grid-cols-5 gap-2 mb-1 p-3">
-      <div className="col-span-1">
+    <nav className="grid grid-cols-6 gap-2 mb-1 p-3">
+      <div className="col-span-2">
         <span
           id="title"
           className="mr-3 inline-block font-bold py-1 text-gray-900 px-3"

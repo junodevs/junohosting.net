@@ -175,9 +175,9 @@ export default function Home () {
         <div className="my-8 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 grid-rows-5 sm:grid-cols-3 sm:grid-rows-2 gap-4">
           {plans.map(vps => {
             return (
-              <div key="tier">
+              <div key={vps.tier.toString()}>
                 <ProductCard tier={vps.tier} price={vps.price}>
-                  <ul className="list">
+                  <ul className="list-disc list-inside">
                     <li>{vps.cores} vCPU{vps.cores === 1 ? '' : 's'}</li>
                     <li>{vps.memory} of RAM</li>
                     <li>{vps.bandwidth} MB/s</li>
