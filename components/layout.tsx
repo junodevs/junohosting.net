@@ -4,14 +4,14 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-import Footer from './footer'
-import Navbar from './navbar'
+import Footer from './footer';
+import Navbar from './navbar';
 
-export const siteTitle = 'Juno Hosting'
+export const siteTitle = 'Juno Hosting';
 
-export default function Layout ({ children }: {
+export default function Layout({ children }: {
   children: React.ReactNode
-}) {
+}): JSX.Element {
   return (
     <div>
       <header>
@@ -23,5 +23,5 @@ export default function Layout ({ children }: {
       <hr className="my-5 max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto" />
       <Footer />
     </div>
-  )
+  );
 }

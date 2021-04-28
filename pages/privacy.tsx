@@ -4,10 +4,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-import Layout, { siteTitle } from '../components/layout'
-import Head from 'next/head'
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
 
-export default function PrivacyPolicy () {
+export default function PrivacyPolicy(): JSX.Element {
   return (
     <Layout>
       <Head>
@@ -63,5 +63,5 @@ export default function PrivacyPolicy () {
         </p>
       </article>
     </Layout>
-  )
+  );
 }

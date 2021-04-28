@@ -4,54 +4,88 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-import Head from 'next/head'
-import CallToAction from '../components/cta'
-import Hero from '../components/hero'
-import Layout, { siteTitle } from '../components/layout'
-import ProductCard from '../components/productCard'
+import Head from 'next/head';
+import CallToAction from '../components/cta';
+import Hero from '../components/hero';
+import Layout, { siteTitle } from '../components/layout';
+import ProductCard from '../components/productCard';
 
 const features: {
   title: string;
-  blurb: string
+  blurb: JSX.Element;
 }[] = [
   {
     title: 'We don\'t nickel and dime',
-    blurb: `Get what you pay for, and more. All transfer limits are soft caps.
-    IPv6 /64 subnet included with all machines.
-    <a class="text-indigo-600 hover:underline" href="mailto:hi@junohosting.net">
-      Contact us
-    </a> for help setting up your new machine at no extra cost.`
+    blurb: (
+      <p>
+        Get what you pay for, and more. All transfer limits are soft caps.
+        IPv6 /64 subnet included with all machines.
+        {' '}
+        <a className="text-indigo-600 hover:underline" href="mailto:hi@junohosting.net">
+          Contact us
+        </a>
+        {' '}
+        for help setting up your new machine at no extra cost.
+      </p>
+    ),
   },
   {
     title: 'Modern hardware',
-    blurb: `All nodes are running on modern hardware, utilizing the latest in
-    virtualization and redundancy, providing for incredible reliability when it
-    matters most.`
+    blurb: (
+      <p>
+        All nodes are running on modern hardware, utilizing the latest in
+        virtualization and redundancy, providing for incredible reliability when it
+        matters most.
+      </p>
+    ),
   },
   {
     title: 'Ethical Infrastructure',
-    blurb: `We take extreme care in sourcing our power and internet resources to
-    minimize our carbon footprint. We select our hardware to reduce E-Waste when
-    hardware is retired.`
+    blurb: (
+      <p>
+        We take extreme care in sourcing our power and internet resources to
+        minimize our carbon footprint. We select our hardware to reduce E-Waste when
+        hardware is retired.
+      </p>
+    ),
   },
   {
     title: 'Rapid Support',
-    blurb: `Extremely fast support from skilled representatives gets any issues
-    resolved within hours, not days.`
+    blurb: (
+      <p>
+        Extremely fast support from skilled representatives gets any issues
+        resolved within hours, not days.
+      </p>
+    ),
   },
   {
     title: 'Plenty of options',
-    blurb: `Have a different plan in mind? Contact us to craft your own solution
-    and get it deployed.`
+    blurb: (
+      <p>
+        Have a different plan in mind? Contact us to craft your own solution
+        and get it deployed.
+      </p>
+    ),
   },
   {
     title: 'Backed by Open Source',
-    blurb: `We support Open Source. 99% of code for our billing platform is
-    available, and <a class="text-indigo-600 hover:underline"
-    href="https://junodevs.tech">we've been building for the
-    open source community for months</a>.`
-  }
-]
+    blurb: (
+      <p>
+        We support Open Source. 99% of code for our billing platform is
+        available, and
+        {' '}
+        <a
+          className="text-indigo-600 hover:underline"
+          href="https://junodevs.tech"
+        >
+          we&apos;ve been building for the
+          open source community for years now
+        </a>
+        .
+      </p>
+    ),
+  },
+];
 
 const plans: {
   cores: number;
@@ -69,7 +103,7 @@ const plans: {
     memory: '512 MB',
     storage: 15,
     tier: 1,
-    goodFor: 'chat bots'
+    goodFor: 'chat bots',
   },
   {
     cores: 1,
@@ -78,7 +112,7 @@ const plans: {
     memory: '2 GB',
     storage: 45,
     tier: 2,
-    goodFor: 'web servers'
+    goodFor: 'web servers',
   },
   {
     cores: 2,
@@ -87,7 +121,7 @@ const plans: {
     price: 10,
     storage: 80,
     tier: 3,
-    goodFor: 'game servers'
+    goodFor: 'game servers',
   },
   {
     cores: 4,
@@ -96,11 +130,11 @@ const plans: {
     price: 15,
     storage: 120,
     tier: 4,
-    goodFor: 'Docker'
-  }
-]
+    goodFor: 'Docker',
+  },
+];
 
-export default function Home () {
+export default function Home(): JSX.Element {
   return (
     <Layout>
       <Head>
@@ -117,19 +151,16 @@ export default function Home () {
       <Hero />
       <section id="features">
         <div className="mt-8 mb-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-4 grid-cols-1 grid-rows-6 md:grid-cols-3 md:grid-rows-2">
-          {features.map(({ title, blurb }) => {
-            return (
-              <div key={title}>
-                <h2 className="text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">
-                  {title}
-                </h2>
-                <p
-                  className="text-gray-900 mt-2"
-                  dangerouslySetInnerHTML={{ __html: blurb }}
-                />
+          {features.map(({ title, blurb }) => (
+            <div key={title}>
+              <h2 className="text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">
+                {title}
+              </h2>
+              <div className="text-gray-900 mt-2">
+                {blurb}
               </div>
-            )
-          })}
+            </div>
+          ))}
         </div>
       </section>
       <CallToAction to="#plans" />
@@ -139,7 +170,9 @@ export default function Home () {
         >
           <div className="text-indigo-600 py-4 px-6">
             <h2 className="mt-2 text-4xl font-bold font-display">
-              About <span className="hidden sm:inline-block">Juno Hosting</span>
+              About
+              {' '}
+              <span className="hidden sm:inline-block">Juno Hosting</span>
               <span className="inline-block sm:hidden">Us</span>
             </h2>
             <p className="mt-4 text-lg text-gray-900">
@@ -173,21 +206,39 @@ export default function Home () {
           </p>
         </div>
         <div className="my-8 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 grid-rows-5 sm:grid-cols-3 sm:grid-rows-2 gap-4">
-          {plans.map(vps => {
-            return (
-              <div key={vps.tier.toString()}>
-                <ProductCard tier={vps.tier} price={vps.price}>
-                  <ul className="list-disc list-inside">
-                    <li>{vps.cores} vCPU{vps.cores === 1 ? '' : 's'}</li>
-                    <li>{vps.memory} of RAM</li>
-                    <li>{vps.bandwidth} MB/s</li>
-                    <li>{vps.storage} GB of Storage</li>
-                    <li>Good for {vps.goodFor}</li>
-                  </ul>
-                </ProductCard>
-              </div>
-            )
-          })}
+          {plans.map((vps) => (
+            <div key={vps.tier.toString()}>
+              <ProductCard tier={vps.tier} price={vps.price}>
+                <ul className="list-disc list-inside">
+                  <li>
+                    {vps.cores}
+                    {' '}
+                    vCPU
+                    {vps.cores === 1 ? '' : 's'}
+                  </li>
+                  <li>
+                    {vps.memory}
+                    {' '}
+                    of RAM
+                  </li>
+                  <li>
+                    {vps.bandwidth}
+                    {' '}
+                    MB/s
+                  </li>
+                  <li>
+                    {vps.storage}
+                    {' '}
+                    GB of Storage
+                  </li>
+                  <li>
+                    Good for
+                    {vps.goodFor}
+                  </li>
+                </ul>
+              </ProductCard>
+            </div>
+          ))}
           <div className="sm:col-span-2 h-full">
             <div className="bg-white shadow-lg rounded-lg overflow-hidden">
               <div className="px-4 py-2">
@@ -212,5 +263,5 @@ export default function Home () {
         </div>
       </section>
     </Layout>
-  )
+  );
 }

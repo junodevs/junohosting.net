@@ -4,10 +4,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-import Layout, { siteTitle } from '../components/layout'
-import Head from 'next/head'
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
 
-export default function TermsOfService () {
+export default function TermsOfService(): JSX.Element {
   return (
     <Layout>
       <Head>
@@ -372,10 +372,22 @@ export default function TermsOfService () {
           </p>
 
           <ul>
-            <li>if it seems that the Customer is using the services provided for any activity whatsoever which is not in compliance with these General Terms and Conditions;</li>
-            <li>in compliance with the applicable Specific Terms and Conditions;</li>
-            <li>if Juno receives a notice in that regard from a competent administrative, arbitral or judicial authority, in compliance with the appropriate applicable laws, or from a third party;</li>
-            <li>if the contact information in the Customer’s account seems to be false, inaccurate or out of date.</li>
+            <li>
+              if it seems that the Customer is using the services provided for any activity
+              whatsoever which is not in compliance with these General Terms and Conditions;
+            </li>
+            <li>
+              in compliance with the applicable Specific Terms and Conditions;
+            </li>
+            <li>
+              if Juno receives a notice in that regard from a competent administrative, arbitral or
+              judicial authority, in compliance with the appropriate applicable laws, or from a
+              third party;
+            </li>
+            <li>
+              if the contact information in the Customer’s account seems to be false, inaccurate or
+              out of date.
+            </li>
           </ul>
         </section>
 
@@ -520,5 +532,5 @@ export default function TermsOfService () {
         </section>
       </article>
     </Layout>
-  )
+  );
 }
