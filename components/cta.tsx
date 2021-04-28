@@ -4,9 +4,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-export default function CallToAction ({ to }: {
+export default function CallToAction({ to }: {
   to: string
-}) {
+}): JSX.Element {
   return (
     <section id="cta">
       <div className="max-w-6xl mx-auto p-4 sm:px-6 lg:pb-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
@@ -34,5 +34,5 @@ export default function CallToAction ({ to }: {
         </div>
       </div>
     </section>
-  )
+  );
 }

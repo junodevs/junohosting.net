@@ -11,8 +11,10 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:react/recommended',
-    'standard'
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'airbnb-typescript',
+    'plugin:react/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -20,13 +22,14 @@ module.exports = {
       jsx: true
     },
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
+    project: './tsconfig.json'
   },
   plugins: [
-    'react',
     '@typescript-eslint'
   ],
   rules: {
+    'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off'
   },

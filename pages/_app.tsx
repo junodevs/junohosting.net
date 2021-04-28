@@ -4,9 +4,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-import { AppProps } from 'next/app'
-import 'tailwindcss/tailwind.css'
+import { AppProps } from 'next/app';
+import '../styles/global.css';
 
-export default function MyApp ({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  return <Component {...pageProps} />;
 }
