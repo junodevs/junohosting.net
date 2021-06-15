@@ -12,38 +12,46 @@ const entries: {
   local: boolean;
 }[] = [
   { href: '/', label: 'Home', local: true },
+  { href: '/about', label: 'About', local: true },
   { href: 'https://billing.junohosting.net', label: 'Client Area', local: false },
-  { href: 'https://discord.gg/asfmaXr', label: 'Contact Us', local: false },
 ];
 
 export default function Navbar(): JSX.Element {
   return (
-    <nav className="grid grid-cols-6 gap-2 mb-1 p-3">
-      <div className="col-span-2">
+    <nav className="flex justify-between bg-black py-4 px-6">
+      <div>
         <span
           id="title"
-          className="mr-3 inline-block font-bold py-1 text-gray-900 px-3"
+          className="inline-block font-bold text-white"
         >
           Juno Hosting
         </span>
       </div>
-      <div className="col-span-4">
-        <ul className="flex float-right">
+      <div>
+        <ul className="flex gap-8">
           {entries.map(({ href, label, local }) => (
             <li
-              className="mr-3 inline-block font-semibold py-1 px-3"
+              className="inline-block font-semibold"
               key={label}
             >
               {local
                 ? (
                   <Link href={href} passHref>
-                    <a className="text-indigo-600 hover:underline" href="replace">
+                    <a
+                      className="text-rose-500 hover:underline"
+                      href="replace"
+                    >
                       {label}
                     </a>
                   </Link>
                 )
                 : (
-                  <a className="text-indigo-600 hover:underline" href={href}>
+                  <a
+                    className="text-rose-500 hover:underline"
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
                     {label}
                   </a>
                 )}

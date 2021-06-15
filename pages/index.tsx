@@ -5,85 +5,63 @@
 */
 
 import Head from 'next/head';
+import {
+  CashIcon, ChipIcon, SparklesIcon, SupportIcon,
+} from '@heroicons/react/outline';
+import type { SVGProps } from 'react';
 import CallToAction from '../components/cta';
 import Hero from '../components/hero';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteDescription, siteTitle } from '../components/layout';
 import ProductCard from '../components/productCard';
 
 const features: {
   title: string;
   blurb: JSX.Element;
+  icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
 }[] = [
   {
     title: 'We don\'t nickel and dime',
     blurb: (
       <p>
-        Get what you pay for, and more. All transfer limits are soft caps.
-        IPv6 /64 subnet included with all machines.
-        {' '}
-        <a className="text-indigo-600 hover:underline" href="mailto:hi@junohosting.net">
-          Contact us
-        </a>
-        {' '}
-        for help setting up your new machine at no extra cost.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl
+        magna, convallis auctor felis sit amet, venenatis tincidunt leo. Duis
+        imperdiet vitae leo sed facilisis.
       </p>
     ),
+    icon: CashIcon,
   },
   {
     title: 'Modern hardware',
     blurb: (
       <p>
-        All nodes are running on modern hardware, utilizing the latest in
-        virtualization and redundancy, providing for incredible reliability when it
-        matters most.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl
+        magna, convallis auctor felis sit amet, venenatis tincidunt leo. Duis
+        imperdiet vitae leo sed facilisis.
       </p>
     ),
+    icon: ChipIcon,
   },
   {
     title: 'Ethical Infrastructure',
     blurb: (
       <p>
-        We take extreme care in sourcing our power and internet resources to
-        minimize our carbon footprint. We select our hardware to reduce E-Waste when
-        hardware is retired.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl
+        magna, convallis auctor felis sit amet, venenatis tincidunt leo. Duis
+        imperdiet vitae leo sed facilisis.
       </p>
     ),
+    icon: SparklesIcon,
   },
   {
     title: 'Rapid Support',
     blurb: (
       <p>
-        Extremely fast support from skilled representatives gets any issues
-        resolved within hours, not days.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl
+        magna, convallis auctor felis sit amet, venenatis tincidunt leo. Duis
+        imperdiet vitae leo sed facilisis.
       </p>
     ),
-  },
-  {
-    title: 'Plenty of options',
-    blurb: (
-      <p>
-        Have a different plan in mind? Contact us to craft your own solution
-        and get it deployed.
-      </p>
-    ),
-  },
-  {
-    title: 'Backed by Open Source',
-    blurb: (
-      <p>
-        We support Open Source. 99% of code for our billing platform is
-        available, and
-        {' '}
-        <a
-          className="text-indigo-600 hover:underline"
-          href="https://junodevs.tech"
-        >
-          we&apos;ve been building for the
-          open source community for years now
-        </a>
-        .
-      </p>
-    ),
+    icon: SupportIcon,
   },
 ];
 
@@ -139,126 +117,61 @@ export default function Home(): JSX.Element {
     <Layout>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          name="description"
-          content="We're a small team dedicated to providing a top-notch experience at an affordable price. With Juno Hosting, you can expect incredible reliability and lightning support."
-        />
+        <meta name="description" content={siteDescription} />
 
         <link rel="icon" href="/favicon.ico" />
 
         <title>{siteTitle}</title>
       </Head>
       <Hero />
-      <section id="features">
-        <div className="mt-8 mb-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-4 grid-cols-1 grid-rows-6 md:grid-cols-3 md:grid-rows-2">
-          {features.map(({ title, blurb }) => (
-            <div key={title}>
-              <h2 className="text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">
-                {title}
-              </h2>
-              <div className="text-gray-900 mt-2">
-                {blurb}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
       <CallToAction to="#plans" />
-      <section id="about-us" className="px-3 lg:px-0">
-        <div
-          className="max-w-4xl rounded-lg mx-auto border-4 border-indigo-600 shadow-lg mb-7"
-        >
-          <div className="text-indigo-600 py-4 px-6">
-            <h2 className="mt-2 text-4xl font-bold font-display">
-              About
-              {' '}
-              <span className="hidden sm:inline-block">Juno Hosting</span>
-              <span className="inline-block sm:hidden">Us</span>
-            </h2>
-            <p className="mt-4 text-lg text-gray-900">
-              I created Juno Hosting because I saw a lack of quality and care in
-              the hosting industry. Juno Hosting was founded on the notion that
-              anyone should be able to share their ideas with the world. From
-              artists to software developers, everyone should have access to
-              performative server options that bring their ideas to life.
-              Whether you&apos;re creating a personal website or a gaming
-              adventure, making it shouldn&apos;t cost an arm and a leg.
-              I&apos;m confident you&apos;ll find your solution in Juno Hosting.
-            </p>
-          </div>
-          <div className="bg-indigo-600 text-white">
-            <div className="py-2 sm:ml-4 px-6">
-              &mdash; Max Bromberg, founder and CEO of Juno Hosting.
+      <section id="features" className="m-6">
+        <div className="py-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:text-center">
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Why Juno Hosting?
+              </p>
+              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum
+                cupiditate veritatis in accusamus quisquam.
+              </p>
+            </div>
+            <div className="mt-10">
+              <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                {features.map((feature) => (
+                  <div key={feature.title} className="relative">
+                    <dt>
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-rose-500 text-white">
+                        <feature.icon className="h-6 w-6" aria-hidden="true" />
+                      </div>
+                      <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.title}</p>
+                    </dt>
+                    <dd className="mt-2 ml-16 text-base text-gray-500">{feature.blurb}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
           </div>
         </div>
       </section>
       <section id="plans">
-        <div className="text-center">
-          <h1
-            className="my-1 text-4xl font-extrabold tracking-tight text-gray-900"
-          >
-            Plans
-          </h1>
-          <p className="max-w-xl mx-auto">
-            We offer four distinct tiers of VPS&apos; designed to meet common
-            use cases. All systems have a soft data transfer limit of 500GB.
+        <div className="lg:text-center">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            Our Plans
+          </p>
+          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at pulvinar tellus.
+            Duis et massa velit. Proin vitae mollis nunc.
           </p>
         </div>
-        <div className="my-8 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 grid-rows-5 sm:grid-cols-3 sm:grid-rows-2 gap-4">
-          {plans.map((vps) => (
-            <div key={vps.tier.toString()}>
-              <ProductCard tier={vps.tier} price={vps.price}>
-                <ul className="list-disc list-inside">
-                  <li>
-                    {vps.cores}
-                    {' '}
-                    vCPU
-                    {vps.cores === 1 ? '' : 's'}
-                  </li>
-                  <li>
-                    {vps.memory}
-                    {' '}
-                    of RAM
-                  </li>
-                  <li>
-                    {vps.bandwidth}
-                    {' '}
-                    MB/s
-                  </li>
-                  <li>
-                    {vps.storage}
-                    {' '}
-                    GB of Storage
-                  </li>
-                  <li>
-                    Good for
-                    {vps.goodFor}
-                  </li>
-                </ul>
-              </ProductCard>
-            </div>
-          ))}
-          <div className="sm:col-span-2 h-full">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-              <div className="px-4 py-2">
-                <h1 className="text-gray-900 font-bold text-2xl">
-                  Need a custom solution?
-                </h1>
-                <p className="text-gray-600 text-sm mt-1 mb-15">
-                  We&apos;ll work with you to create exactly what you need for
-                  your circumstances. Contact us to get started.
-                </p>
+        <div className="bg-black my-8 border-t-8 border-b-8 border-rose-500">
+          <div className="grid mx-auto justify-center gap-10 p-16 grid-cols-1 md:grid-cols-4">
+            {plans.map((_, i) => (
+              <div key={i.toString()}>
+                <ProductCard tier={i} />
               </div>
-              <div className="flex bg-gray-900 justify-end px-4 py-2">
-                <a
-                  href="mailto:hi@junohosting.net"
-                  className="px-3 py-1 bg-gray-200 hover:bg-gray-300 text-sm text-gray-900 font-semibold rounded"
-                >
-                  Contact Us
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

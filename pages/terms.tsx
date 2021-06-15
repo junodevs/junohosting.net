@@ -5,23 +5,20 @@
 */
 
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteDescription, siteTitle } from '../components/layout';
 
 export default function TermsOfService(): JSX.Element {
   return (
     <Layout>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website with Next.js"
-        />
+        <meta name="description" content={siteDescription} />
 
         <link rel="icon" href="/favicon.ico" />
 
         <title>{siteTitle}</title>
       </Head>
-      <article className="prose mx-auto">
+      <article className="prose mx-auto my-9">
         <h1>
           General Terms and Conditions of Service
         </h1>

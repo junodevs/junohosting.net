@@ -8,6 +8,7 @@ import Footer from './footer';
 import Navbar from './navbar';
 
 export const siteTitle = 'Juno Hosting';
+export const siteDescription = 'We\'re a small team dedicated to providing a top-notch experience at an affordable price. With Juno Hosting, you can expect incredible reliability and lightning support.';
 
 export default function Layout({ children }: {
   children: React.ReactNode
@@ -20,7 +21,6 @@ export default function Layout({ children }: {
       <main>
         {children}
       </main>
-      <hr className="my-5 max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto" />
       <Footer />
     </div>
   );

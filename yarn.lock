@@ -175,10 +175,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@junodevs/hosting-website@workspace:.":
+"@heroicons/react@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@heroicons/react@npm:1.0.1"
+  peerDependencies:
+    react: ">= 16"
+  checksum: ff13b6b896c21d1e9a952afc8d646d95fa34174716f2a741ee0db2300d10903a6c708b1fb1d841a461a61eb055c104a2be3367fe236a25d3e7576704183743ff
+  languageName: node
+  linkType: hard
+
+"@junodevs/junohosting.net@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@junodevs/hosting-website@workspace:."
+  resolution: "@junodevs/junohosting.net@workspace:."
   dependencies:
+    "@heroicons/react": ^1.0.1
     "@tailwindcss/typography": ^0.4.0
     "@types/node": ^14.14.37
     "@types/react": ^17.0.3
