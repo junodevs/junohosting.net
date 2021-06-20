@@ -31,7 +31,7 @@ export default function CallToAction({ to }: {
               rel="noreferrer noopener"
               target="_blank"
             >
-              Join Our Discord
+              Join our Discord
             </a>
           </div>
         </div>

@@ -12,7 +12,8 @@ const entries: {
   local: boolean;
 }[] = [
   { href: '/', label: 'Home', local: true },
-  { href: 'https://billing.junohosting.net', label: 'Client Area', local: false },
+  { href: 'https://gamma.junohosting.net', label: 'Control Panel', local: false },
+  { href: 'https://billing.junohosting.net', label: 'Billing Area', local: false },
 ];
 
 export default function Navbar(): JSX.Element {
