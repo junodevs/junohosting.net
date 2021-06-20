@@ -5,12 +5,9 @@
 */
 
 import Link from 'next/link';
+import Image from 'next/image';
 
-const entries: {
-  href: string;
-  label: string;
-  local: boolean;
-}[] = [
+const entries = [
   { href: '/', label: 'Home', local: true },
   { href: 'https://gamma.junohosting.net', label: 'Control Panel', local: false },
   { href: 'https://billing.junohosting.net', label: 'Billing Area', local: false },
@@ -18,14 +15,18 @@ const entries: {
 
 export default function Navbar(): JSX.Element {
   return (
-    <nav className="flex justify-between bg-black py-4 px-6">
-      <div>
-        <span
-          id="title"
-          className="inline-block font-bold text-white"
-        >
-          Juno Hosting
-        </span>
+    <nav className="flex justify-between items-center bg-black py-4 px-6">
+      <div className="w-9 h-9 relative">
+        <Link href="/" passHref>
+          <a href="replace">
+            <Image
+              id="title"
+              src="/JH.webp"
+              layout="fill"
+              objectFit="contain"
+            />
+          </a>
+        </Link>
       </div>
       <div>
         <ul className="flex gap-8">
@@ -38,7 +39,7 @@ export default function Navbar(): JSX.Element {
                 ? (
                   <Link href={href} passHref>
                     <a
-                      className="text-rose-500 hover:underline"
+                      className="text-white hover:underline"
                       href="replace"
                     >
                       {label}
@@ -47,7 +48,7 @@ export default function Navbar(): JSX.Element {
                 )
                 : (
                   <a
-                    className="text-rose-500 hover:underline"
+                    className="text-white hover:underline"
                     href={href}
                     target="_blank"
                     rel="noreferrer noopener"
