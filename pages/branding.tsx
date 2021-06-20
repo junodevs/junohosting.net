@@ -5,9 +5,9 @@
 */
 
 import Head from 'next/head';
-import Layout, { siteTitle, siteDescription } from '../components/layout';
+import Layout, { siteDescription, siteTitle } from '../components/layout';
 
-export default function About(): JSX.Element {
+export default function PrivacyPolicy(): JSX.Element {
   return (
     <Layout>
       <Head>

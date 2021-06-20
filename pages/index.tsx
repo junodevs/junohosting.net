@@ -23,9 +23,8 @@ const features: {
     title: 'We don\'t nickel and dime',
     blurb: (
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl
-        magna, convallis auctor felis sit amet, venenatis tincidunt leo. Duis
-        imperdiet vitae leo sed facilisis.
+        Get what you pay for, and more. All transfer limits are soft caps. IPv6 /64 subnet included
+        with all machines. Contact us for help setting up your new machine at no extra cost.
       </p>
     ),
     icon: CashIcon,
@@ -34,31 +33,29 @@ const features: {
     title: 'Modern hardware',
     blurb: (
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl
-        magna, convallis auctor felis sit amet, venenatis tincidunt leo. Duis
-        imperdiet vitae leo sed facilisis.
+        All nodes are running on modern hardware, utilizing the latest in virtualization and
+        redundancy, providing for incredible reliability when it matters most.
       </p>
     ),
     icon: ChipIcon,
   },
   {
-    title: 'Ethical Infrastructure',
+    title: 'Ethical infrastructure',
     blurb: (
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl
-        magna, convallis auctor felis sit amet, venenatis tincidunt leo. Duis
-        imperdiet vitae leo sed facilisis.
+        We take extreme care in sourcing our power and internet resources to minimize our carbon
+        footprint. We select our hardware to reduce E-Waste when hardware is retired.
       </p>
     ),
     icon: SparklesIcon,
   },
   {
-    title: 'Rapid Support',
+    title: 'Rapid support',
     blurb: (
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl
-        magna, convallis auctor felis sit amet, venenatis tincidunt leo. Duis
-        imperdiet vitae leo sed facilisis.
+        Extremely fast support from knowledgeable representatives gets any issues resolved within
+        hours, not days. Get free migration and true technical assistance until you&apos;re up and
+        running.
       </p>
     ),
     icon: SupportIcon,
@@ -133,8 +130,8 @@ export default function Home(): JSX.Element {
                 Why Juno Hosting?
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum
-                cupiditate veritatis in accusamus quisquam.
+                Our flexible platform gives you simple management with quick deployment and our
+                small size means you can get in touch with a real person quickly.
               </p>
             </div>
             <div className="mt-10">
@@ -145,7 +142,7 @@ export default function Home(): JSX.Element {
                       <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-rose-500 text-white">
                         <feature.icon className="h-6 w-6" aria-hidden="true" />
                       </div>
-                      <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.title}</p>
+                      <p className="ml-16 text-lg leading-6 font-semibold text-gray-900">{feature.title}</p>
                     </dt>
                     <dd className="mt-2 ml-16 text-base text-gray-500">{feature.blurb}</dd>
                   </div>
@@ -156,24 +153,29 @@ export default function Home(): JSX.Element {
         </div>
       </section>
       <section id="plans">
-        <div className="lg:text-center">
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Our Plans
-          </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at pulvinar tellus.
-            Duis et massa velit. Proin vitae mollis nunc.
-          </p>
-        </div>
         <div className="bg-black my-8 border-t-8 border-b-8 border-rose-500">
-          <div className="grid mx-auto justify-center gap-10 p-16 grid-cols-1 md:grid-cols-4">
-            {plans.map((_, i) => (
-              <div key={i.toString()}>
-                <ProductCard tier={i} />
-              </div>
-            ))}
+          <div className="px-16 pb-16 pt-8">
+            <div className="lg:text-center mb-10">
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-100 sm:text-4xl">
+                Our Plans
+              </p>
+              <p className="mt-4 max-w-2xl text-xl text-gray-400 lg:mx-auto">
+                We offer four distinct tiers of our product designed to meet common use cases. All
+                systems have a soft data transfer limit of 500GB.
+              </p>
+            </div>
+            <div className="grid mx-auto justify-center gap-10 grid-cols-1 md:grid-cols-4">
+              {plans.map((_, i) => (
+                <div key={i.toString()}>
+                  <ProductCard tier={i} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+      </section>
+      <section id="about">
+        {/* About Us Section */}
       </section>
     </Layout>
   );

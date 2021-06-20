@@ -12,7 +12,6 @@ const entries: {
   local: boolean;
 }[] = [
   { href: '/', label: 'Home', local: true },
-  { href: '/about', label: 'About', local: true },
   { href: 'https://billing.junohosting.net', label: 'Client Area', local: false },
 ];
 

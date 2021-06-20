@@ -13,14 +13,13 @@ const entries = [
     { href: '/privacy', label: 'Privacy Policy', local: true },
   ],
   [
-    { href: '/about', label: 'About Us', local: true },
     { href: 'https://billing.junohosting.net', label: 'Client Area', local: false },
     { href: '/', label: 'Branding', local: false },
   ],
   [
     { href: 'https://junodevs.tech', label: 'Juno Devs', local: false },
     { href: '/terms', label: 'Terms Of Service', local: true },
-    { href: '/', label: 'System Status', local: false },
+    { href: 'https://junohosting.instatus.com', label: 'System Status', local: false },
   ],
 ];
 
