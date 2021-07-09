@@ -174,7 +174,22 @@ export default function Home(): JSX.Element {
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="about" className="px-56 pb-10">
+        <div>
+          <p className="mb-4 max-w-xs text-3xl leading-8 font-extrabold tracking-tight text-black sm:text-4xl">
+            About Juno Hosting
+            <hr className="my-2 bg-rose-500 h-1 px-4 sm:px-6 lg:px-8" />
+          </p>
+          <p className="font-medium text-lg text-gray-800">
+            We started Juno Hosting because we noticed a lack of quality and care in the hosting
+            industry. Juno Hosting was founded on the notion that anyone should be able to share
+            their ideas with the world. From artists to software developers, everyone should have
+            access to performative server options that bring their ideas to life. Whether
+            you&apos;re creating a website for yourself or your business or a gaming adventure,
+            making it shouldn&apos;t cost an arm and a leg. We&apos;re confident you&apos;ll find
+            your solution in Juno Hosting.
+          </p>
+        </div>
         {/* About Us Section */}
       </section>
     </Layout>
