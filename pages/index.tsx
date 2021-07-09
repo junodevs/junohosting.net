@@ -174,12 +174,12 @@ export default function Home(): JSX.Element {
           </div>
         </div>
       </section>
-      <section id="about" className="px-56 pb-10">
+      <section id="about" className="px-16 md:px-56 pb-10">
         <div>
-          <p className="mb-4 max-w-xs text-3xl leading-8 font-extrabold tracking-tight text-black sm:text-4xl">
+          <span className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
             About Juno Hosting
-            <hr className="my-2 bg-rose-500 h-1 px-4 sm:px-6 lg:px-8" />
-          </p>
+          </span>
+          <hr className="my-2 w-1/6 bg-rose-500 h-1 px-4 sm:px-6 lg:px-8" />
           <p className="font-medium text-lg text-gray-800">
             We started Juno Hosting because we noticed a lack of quality and care in the hosting
             industry. Juno Hosting was founded on the notion that anyone should be able to share
