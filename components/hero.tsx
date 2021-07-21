@@ -20,9 +20,8 @@ export default function Hero(): JSX.Element {
               .
             </h2>
             <p className="mt-4 text-lg text-gray-300 max-w-3xl">
-              We&apos;re a small team dedicated to providing a top-notch experience at an
-              affordable price. With Juno Hosting, you can expect incredible reliability and
-              lightning support.
+              We&apos;re a small team dedicated to providing a top-notch service at an affordable
+              price. With Juno Hosting, you can expect incredible reliability and lightning support.
             </p>
           </div>
           <div className="mt-8 lg:mt-0 font-mono">

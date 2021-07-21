@@ -160,7 +160,7 @@ export default function Home(): JSX.Element {
                 Our Plans
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-400 lg:mx-auto">
-                We offer four distinct tiers of our product designed to meet common use cases. All
+                We offer four distinct tiers of service designed to meet common use cases. All
                 systems have a soft data transfer limit of 500GB.
               </p>
             </div>
