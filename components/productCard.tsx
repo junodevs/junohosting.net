@@ -5,7 +5,6 @@
 */
 
 import { CheckIcon } from '@heroicons/react/solid';
-import Link from 'next/link';
 
 const tiers = [
   {
@@ -100,14 +99,14 @@ export default function ProductCard({ tier }: { tier: number }): JSX.Element {
           </dd>
         </div>
       </dl>
-      <Link href="/" passHref>
-        <a
-          href="replace"
-          className="rounded items-center justify-center flex px-5 py-2 transition text-white bg-rose-500 hover:bg-rose-600"
-        >
-          Purchase
-        </a>
-      </Link>
+      <a
+        href={`https://billing.junohosting.net/order/config/index/vps/?group_id=13&pricing_id=${tier + 6}`}
+        className="rounded items-center justify-center flex px-5 py-2 transition text-white bg-rose-500 hover:bg-rose-600"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Purchase
+      </a>
     </div>
   );
 }
